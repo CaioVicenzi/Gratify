@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */; };
+		FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46DD0C2A13BBD80047C614 /* Dados.swift */; };
+		FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
+		FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
+		FD4F40432A293415008F68E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40422A293415008F68E8 /* ContentView.swift */; };
+		FD4F40462A2A5E4F008F68E8 /* ElementoLista.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40452A2A5E4F008F68E8 /* ElementoLista.swift */; };
+		FD4F40482A2A5F7D008F68E8 /* BarraDeAcoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40472A2A5F7D008F68E8 /* BarraDeAcoesView.swift */; };
+		FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */; };
+		FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */; };
+		FD73D6752A1199DF005E5E49 /* RegistrarDiario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6742A1199DF005E5E49 /* RegistrarDiario.swift */; };
+		FD73D6772A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6762A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift */; };
+		FD8BE7EF2A1E6AD800317EF4 /* ElementosdeFora.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8BE7EE2A1E6AD800317EF4 /* ElementosdeFora.swift */; };
+		FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */; };
+		FDAE47AE2A02864D0095FB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47AD2A02864D0095FB09 /* Assets.xcassets */; };
+		FDAE47B12A02864D0095FB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */; };
+		FDAE47B82A0286E80095FB09 /* Registrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* Registrar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDePesquisaFiltro.swift; sourceTree = "<group>"; };
+		FD46DD0C2A13BBD80047C614 /* Dados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
+		FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GratidaoModel.xcdatamodel; sourceTree = "<group>"; };
+		FD4F40402A29217E008F68E8 /* GratidaoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratidaoController.swift; sourceTree = "<group>"; };
+		FD4F40422A293415008F68E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD4F40452A2A5E4F008F68E8 /* ElementoLista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementoLista.swift; sourceTree = "<group>"; };
+		FD4F40472A2A5F7D008F68E8 /* BarraDeAcoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDeAcoesView.swift; sourceTree = "<group>"; };
+		FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoVoltar.swift; sourceTree = "<group>"; };
+		FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoView.swift; sourceTree = "<group>"; };
+		FD73D6742A1199DF005E5E49 /* RegistrarDiario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarDiario.swift; sourceTree = "<group>"; };
+		FD73D6762A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarImagemGratidaoView.swift; sourceTree = "<group>"; };
+		FD8BE7EE2A1E6AD800317EF4 /* ElementosdeFora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementosdeFora.swift; sourceTree = "<group>"; };
+		FDAE47A62A02864C0095FB09 /* Gratify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatfyApp.swift; sourceTree = "<group>"; };
+		FDAE47AD2A02864D0095FB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDAE47B72A0286E80095FB09 /* Registrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDAE47A32A02864C0095FB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD4F403B2A292035008F68E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */,
+				FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */,
+				FD4F40442A2A5E0E008F68E8 /* ContentView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD4F403C2A29206D008F68E8 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */,
+				FD4F40402A29217E008F68E8 /* GratidaoController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		FD4F40442A2A5E0E008F68E8 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F40422A293415008F68E8 /* ContentView.swift */,
+				FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */,
+				FD4F40452A2A5E4F008F68E8 /* ElementoLista.swift */,
+				FD4F40472A2A5F7D008F68E8 /* BarraDeAcoesView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */ = {
+			isa = PBXGroup;
+			children = (
+				FD73D6742A1199DF005E5E49 /* RegistrarDiario.swift */,
+				FD73D6762A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift */,
+				FDAE47B72A0286E80095FB09 /* Registrar.swift */,
+			);
+			path = RegistrarGratidao;
+			sourceTree = "<group>";
+		};
+		FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */ = {
+			isa = PBXGroup;
+			children = (
+				FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */,
+			);
+			path = DetalhamentoGratidao;
+			sourceTree = "<group>";
+		};
+		FDAE479D2A02864C0095FB09 = {
+			isa = PBXGroup;
+			children = (
+				FDAE47A82A02864C0095FB09 /* Greatfy */,
+				FDAE47A72A02864C0095FB09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDAE47A72A02864C0095FB09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE47A62A02864C0095FB09 /* Gratify.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDAE47A82A02864C0095FB09 /* Greatfy */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */,
+				FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */,
+				FD8BE7EE2A1E6AD800317EF4 /* ElementosdeFora.swift */,
+				FD46DD0C2A13BBD80047C614 /* Dados.swift */,
+				FD4F403C2A29206D008F68E8 /* DataModel */,
+				FD4F403B2A292035008F68E8 /* Views */,
+				FDAE47AD2A02864D0095FB09 /* Assets.xcassets */,
+				FDAE47AF2A02864D0095FB09 /* Preview Content */,
+			);
+			path = Greatfy;
+			sourceTree = "<group>";
+		};
+		FDAE47AF2A02864D0095FB09 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDAE47A52A02864C0095FB09 /* Gratify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAE47B42A02864D0095FB09 /* Build configuration list for PBXNativeTarget "Gratify" */;
+			buildPhases = (
+				FDAE47A22A02864C0095FB09 /* Sources */,
+				FDAE47A32A02864C0095FB09 /* Frameworks */,
+				FDAE47A42A02864C0095FB09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gratify;
+			productName = Greatfy;
+			productReference = FDAE47A62A02864C0095FB09 /* Gratify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDAE479E2A02864C0095FB09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FDAE47A52A02864C0095FB09 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = FDAE47A12A02864C0095FB09 /* Build configuration list for PBXProject "Gratify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDAE479D2A02864C0095FB09;
+			productRefGroup = FDAE47A72A02864C0095FB09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDAE47A52A02864C0095FB09 /* Gratify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDAE47A42A02864C0095FB09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAE47B12A02864D0095FB09 /* Preview Assets.xcassets in Resources */,
+				FDAE47AE2A02864D0095FB09 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDAE47A22A02864C0095FB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4F40482A2A5F7D008F68E8 /* BarraDeAcoesView.swift in Sources */,
+				FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */,
+				FD4F40432A293415008F68E8 /* ContentView.swift in Sources */,
+				FD8BE7EF2A1E6AD800317EF4 /* ElementosdeFora.swift in Sources */,
+				FD73D6772A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift in Sources */,
+				FD4F40462A2A5E4F008F68E8 /* ElementoLista.swift in Sources */,
+				FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */,
+				FDAE47B82A0286E80095FB09 /* Registrar.swift in Sources */,
+				FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */,
+				FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */,
+				FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */,
+				FD73D6752A1199DF005E5E49 /* RegistrarDiario.swift in Sources */,
+				FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */,
+				FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FDAE47B22A02864D0095FB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDAE47B32A02864D0095FB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDAE47B52A02864D0095FB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Greatfy/Preview Content\"";
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Isso permitirá que você use a câmera para adicionar fotos para suas gratidões.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDAE47B62A02864D0095FB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Greatfy/Preview Content\"";
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Isso permitirá que você use a câmera para adicionar fotos para suas gratidões.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDAE47A12A02864C0095FB09 /* Build configuration list for PBXProject "Gratify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAE47B22A02864D0095FB09 /* Debug */,
+				FDAE47B32A02864D0095FB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAE47B42A02864D0095FB09 /* Build configuration list for PBXNativeTarget "Gratify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAE47B52A02864D0095FB09 /* Debug */,
+				FDAE47B62A02864D0095FB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */,
+			);
+			currentVersion = FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */;
+			path = GratidaoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FDAE479E2A02864C0095FB09 /* Project object */;
+}
