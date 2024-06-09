@@ -80,7 +80,7 @@ struct StreakAumentandoView: View {
             .resizable()
             .scaledToFit()
             .frame(width: animarMao ? UIScreen.main.bounds.width / 3 : UIScreen.main.bounds.width / 5)
-            .foregroundStyle(Color(.accent))
+            .foregroundStyle(.purple)
     }
 }
 

@@ -15,8 +15,8 @@ extension HomeView {
         @Published var showInfoSheet : Bool = false
         @Published var searchText : String = ""
         @Published var showMaximizedStreak : Bool = false
-        @Published var streak : Int = 0
-        @Published var wroteGratitudeToday : Bool = false
+        @AppStorage("streak", store: UserDefaults(suiteName: "group.caio.gratify")) var streak : Int = 0
+        @AppStorage("hojeRegistrou", store: UserDefaults(suiteName: "group.caio.gratify")) var wroteGratitudeToday : Bool = false
         @Published var showRegisterGratitude : Bool = false
         @Published var sharedItem : Gratidao? = nil
         @Published var randomGratitude : Gratidao? = nil

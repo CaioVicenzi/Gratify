@@ -44,9 +44,9 @@ struct RegistrarGratidaoView: View {
                             TextEditor(text: $vm.titulo)
                                 .foregroundColor(.gray)
                                 .background(Color.clear)
-                                .onChange(of: vm.titulo) { novoValor in
+                                .onChange(of: vm.titulo, { _, novoValor in
                                     vm.titleValueChanged(newValue: novoValor)
-                                }
+                                })
                         })
                         .font(.title3)
                         
@@ -74,7 +74,7 @@ struct RegistrarGratidaoView: View {
                             } label: {
                                 Spacer()
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 10).frame(width: 144, height: 50).foregroundColor(.accentColor)
+                                    RoundedRectangle(cornerRadius: 10).frame(width: 144, height: 50).foregroundColor(.purple)
                                     HStack{
                                         Image(systemName: "camera")
                                         Text("imagem").fontWeight(.semibold)
@@ -84,7 +84,7 @@ struct RegistrarGratidaoView: View {
                                 
                             }.actionSheet(isPresented: $vm.actionSheetAparecendo) {
                                 ActionSheet(title: Text("Selecione uma imagem"), message: Text("Como você quer selecionar ela?"), buttons: [
-                                    .default(Text("Galeria").foregroundColor(.accentColor)){
+                                    .default(Text("Galeria").foregroundColor(.purple)){
                                         vm.imagePicker = true
                                     },
                                     .default(Text("Câmera")){
@@ -103,16 +103,19 @@ struct RegistrarGratidaoView: View {
                         if let dataImage = vm.imagemData {
                             if let imagemData = UIImage(data: dataImage) {
                                 VStack {
-                                    Button {
-                                        vm.imagemData = nil
-                                    } label: {
-                                        Image(systemName: "xmark.circle")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 20)
-                                            .padding()
-                                            .frame(maxWidth: .infinity)
-                                            .frame(alignment: .trailing)
+                                    
+                                    HStack {
+                                        Button {
+                                            withAnimation (.spring){
+                                                vm.imagemData = nil
+                                            }
+                                        } label: {
+                                            Image(systemName: "xmark.circle")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 20)
+                                        }
+                                        Spacer()
                                     }
                                     
                                     Image(uiImage: imagemData)

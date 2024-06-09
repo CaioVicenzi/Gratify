@@ -51,7 +51,7 @@ extension HomeView {
             Image(systemName: "square.and.pencil")
         }
         .navigationDestination(isPresented: $vm.showRegisterGratitude) {
-            Registrar()
+            RegistrarGratidaoView()
         }
     }
         
