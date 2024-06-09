@@ -11,6 +11,8 @@ import CoreData
 class GratidaoController:ObservableObject {
     let container = NSPersistentContainer(name: "GratidaoModel")
     
+    static let compartilhado : GratidaoController  = GratidaoController()
+    
     init(){
         container.loadPersistentStores{desc, error in
             if let error = error {
@@ -27,29 +29,34 @@ class GratidaoController:ObservableObject {
         }
     }
     
-    func adicionarGratidaoDiario (titulo:String, descricao:String, context: NSManagedObjectContext) {
+    func adicionarGratidaoDiario (titulo:String, descricao:String, data : Date, context: NSManagedObjectContext) {
         let gratidao:Gratidao = Gratidao(context: context)
         gratidao.id = UUID()
-        gratidao.data = Date()
+        gratidao.data = data
         gratidao.titulo = titulo
         gratidao.descricao = descricao
+        gratidao.dataInclusao = Date()
         
         salvar(context: context)
     }
     
-    func adicionarGratidaoPorImagem (titulo:String, descricao:String, imageData:Data, context: NSManagedObjectContext){
+    func adicionarGratidaoPorImagem (titulo:String, descricao:String, imageData:Data?, data: Date?,  context: NSManagedObjectContext){
         let gratidao:Gratidao = Gratidao(context: context)
         gratidao.id = UUID()
+        gratidao.data = data
         gratidao.titulo = titulo
         gratidao.descricao = descricao
         gratidao.imagem = imageData
+        gratidao.dataInclusao = Date()
         
         salvar(context: context)
     }
     
-    func editarGratidao (gratidao:Gratidao, titulo:String, descricao:String, context: NSManagedObjectContext) {
+    func editarGratidao (gratidao:Gratidao, titulo:String, descricao:String, data: Date, imagem: Data?, context: NSManagedObjectContext) {
+        gratidao.imagem = imagem
         gratidao.titulo = titulo
         gratidao.descricao = descricao
+        gratidao.data = data
         salvar(context: context)
     }
     

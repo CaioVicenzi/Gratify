@@ -13,8 +13,10 @@ struct GreatfyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, gratidaoController.container.viewContext)
+            NavigationStack {
+                HomeView()
+            }
+            .environment(\.managedObjectContext, gratidaoController.container.viewContext)
         }
     }
 }

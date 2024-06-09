@@ -8,41 +8,102 @@
 
 /* Begin PBXBuildFile section */
 		FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */; };
+		FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */; };
+		FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641E2C149CA700DF1B98 /* CameraView.swift */; };
+		FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1064202C149CC100DF1B98 /* ImagePicker.swift */; };
 		FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46DD0C2A13BBD80047C614 /* Dados.swift */; };
+		FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */; };
+		FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */; };
+		FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */; };
 		FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
 		FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
-		FD4F40432A293415008F68E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40422A293415008F68E8 /* ContentView.swift */; };
-		FD4F40462A2A5E4F008F68E8 /* ElementoLista.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40452A2A5E4F008F68E8 /* ElementoLista.swift */; };
-		FD4F40482A2A5F7D008F68E8 /* BarraDeAcoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40472A2A5F7D008F68E8 /* BarraDeAcoesView.swift */; };
 		FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */; };
 		FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */; };
-		FD73D6752A1199DF005E5E49 /* RegistrarDiario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6742A1199DF005E5E49 /* RegistrarDiario.swift */; };
-		FD73D6772A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6762A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift */; };
-		FD8BE7EF2A1E6AD800317EF4 /* ElementosdeFora.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8BE7EE2A1E6AD800317EF4 /* ElementosdeFora.swift */; };
 		FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */; };
 		FDAE47AE2A02864D0095FB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47AD2A02864D0095FB09 /* Assets.xcassets */; };
 		FDAE47B12A02864D0095FB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */; };
 		FDAE47B82A0286E80095FB09 /* Registrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* Registrar.swift */; };
+		FDDDCA582B82F5290045B60D /* PopupErro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDCA572B82F5290045B60D /* PopupErro.swift */; };
+		FDE5FE1C2B7DD0C700097000 /* StreakAumentandoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */; };
+		FDE5FE1E2B7E59FE00097000 /* HapticHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE1D2B7E59FE00097000 /* HapticHandler.swift */; };
+		FDE5FE262B7EF0F600097000 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5FE252B7EF0F600097000 /* WidgetKit.framework */; };
+		FDE5FE282B7EF0F600097000 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5FE272B7EF0F600097000 /* SwiftUI.framework */; };
+		FDE5FE2B2B7EF0F600097000 /* StreakWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE2A2B7EF0F600097000 /* StreakWidgetBundle.swift */; };
+		FDE5FE2D2B7EF0F600097000 /* StreakWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE2C2B7EF0F600097000 /* StreakWidget.swift */; };
+		FDE5FE2F2B7EF0F800097000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE5FE2E2B7EF0F800097000 /* Assets.xcassets */; };
+		FDE5FE332B7EF0F800097000 /* StreakWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FDE5FE232B7EF0F600097000 /* StreakWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FDE5FE3A2B7EF3BF00097000 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE382B7EF2DF00097000 /* Color.swift */; };
+		FDE8BE912AE9ACB00041F688 /* InformacaoGratidao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE902AE9ACB00041F688 /* InformacaoGratidao.swift */; };
+		FDE8BE942AE9B8010041F688 /* NotificacaoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE932AE9B8010041F688 /* NotificacaoHandler.swift */; };
+		FDE8BE962AEA111E0041F688 /* ConfigurarNotificação.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE952AEA111E0041F688 /* ConfigurarNotificação.swift */; };
+		FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6E05C2C133ADB0017385D /* HomeView.swift */; };
+		FDF6E0612C133C000017385D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6E0602C133C000017385D /* HomeViewModel.swift */; };
+		FDF6E0632C1347FA0017385D /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6E0622C1347FA0017385D /* ListItem.swift */; };
+		FDF6E0652C1373250017385D /* HomeViewUIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6E0642C1373250017385D /* HomeViewUIComponents.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDE5FE312B7EF0F800097000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDAE479E2A02864C0095FB09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDE5FE222B7EF0F600097000;
+			remoteInfo = StreakWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDE5FE372B7EF0F800097000 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FDE5FE332B7EF0F800097000 /* StreakWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDePesquisaFiltro.swift; sourceTree = "<group>"; };
+		FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		FD10641E2C149CA700DF1B98 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		FD1064202C149CC100DF1B98 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FD46DD0C2A13BBD80047C614 /* Dados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
+		FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewModel.swift; sourceTree = "<group>"; };
+		FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewComponents.swift; sourceTree = "<group>"; };
+		FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GratidaoModel.xcdatamodel; sourceTree = "<group>"; };
 		FD4F40402A29217E008F68E8 /* GratidaoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratidaoController.swift; sourceTree = "<group>"; };
-		FD4F40422A293415008F68E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FD4F40452A2A5E4F008F68E8 /* ElementoLista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementoLista.swift; sourceTree = "<group>"; };
-		FD4F40472A2A5F7D008F68E8 /* BarraDeAcoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDeAcoesView.swift; sourceTree = "<group>"; };
 		FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoVoltar.swift; sourceTree = "<group>"; };
 		FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoView.swift; sourceTree = "<group>"; };
-		FD73D6742A1199DF005E5E49 /* RegistrarDiario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarDiario.swift; sourceTree = "<group>"; };
-		FD73D6762A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarImagemGratidaoView.swift; sourceTree = "<group>"; };
-		FD8BE7EE2A1E6AD800317EF4 /* ElementosdeFora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementosdeFora.swift; sourceTree = "<group>"; };
 		FDAE47A62A02864C0095FB09 /* Gratify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatfyApp.swift; sourceTree = "<group>"; };
 		FDAE47AD2A02864D0095FB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDAE47B72A0286E80095FB09 /* Registrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrar.swift; sourceTree = "<group>"; };
+		FDDDCA572B82F5290045B60D /* PopupErro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupErro.swift; sourceTree = "<group>"; };
+		FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakAumentandoView.swift; sourceTree = "<group>"; };
+		FDE5FE1D2B7E59FE00097000 /* HapticHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHandler.swift; sourceTree = "<group>"; };
+		FDE5FE232B7EF0F600097000 /* StreakWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreakWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDE5FE252B7EF0F600097000 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FDE5FE272B7EF0F600097000 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FDE5FE2A2B7EF0F600097000 /* StreakWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakWidgetBundle.swift; sourceTree = "<group>"; };
+		FDE5FE2C2B7EF0F600097000 /* StreakWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakWidget.swift; sourceTree = "<group>"; };
+		FDE5FE2E2B7EF0F800097000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDE5FE302B7EF0F800097000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE5FE382B7EF2DF00097000 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FDE5FE3B2B7EF74300097000 /* Gratify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gratify.entitlements; sourceTree = "<group>"; };
+		FDE5FE3C2B7EF85400097000 /* StreakWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreakWidgetExtension.entitlements; sourceTree = "<group>"; };
+		FDE8BE902AE9ACB00041F688 /* InformacaoGratidao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoGratidao.swift; sourceTree = "<group>"; };
+		FDE8BE932AE9B8010041F688 /* NotificacaoHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacaoHandler.swift; sourceTree = "<group>"; };
+		FDE8BE952AEA111E0041F688 /* ConfigurarNotificação.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigurarNotificação.swift"; sourceTree = "<group>"; };
+		FDF6E05C2C133ADB0017385D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FDF6E0602C133C000017385D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FDF6E0622C1347FA0017385D /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		FDF6E0642C1373250017385D /* HomeViewUIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUIComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,44 +114,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDE5FE202B7EF0F600097000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDE5FE282B7EF0F600097000 /* SwiftUI.framework in Frameworks */,
+				FDE5FE262B7EF0F600097000 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FD4F403B2A292035008F68E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDDDCA562B82F5170045B60D /* Components */,
+				FDE5FE1A2B7DD0B400097000 /* AnimacaoStreakAumentando */,
+				FDE8BE8F2AE9AC990041F688 /* InformacaoGratidao */,
 				FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */,
 				FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */,
-				FD4F40442A2A5E0E008F68E8 /* ContentView */,
+				FD4F40442A2A5E0E008F68E8 /* HomeView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		FD4F403C2A29206D008F68E8 /* DataModel */ = {
+		FD4F403C2A29206D008F68E8 /* PersistenceController */ = {
 			isa = PBXGroup;
 			children = (
 				FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */,
 				FD4F40402A29217E008F68E8 /* GratidaoController.swift */,
 			);
-			path = DataModel;
+			path = PersistenceController;
 			sourceTree = "<group>";
 		};
-		FD4F40442A2A5E0E008F68E8 /* ContentView */ = {
+		FD4F40442A2A5E0E008F68E8 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				FD4F40422A293415008F68E8 /* ContentView.swift */,
-				FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */,
-				FD4F40452A2A5E4F008F68E8 /* ElementoLista.swift */,
-				FD4F40472A2A5F7D008F68E8 /* BarraDeAcoesView.swift */,
+				FDF6E0582C133A8A0017385D /* Components */,
+				FDF6E0602C133C000017385D /* HomeViewModel.swift */,
+				FDF6E05C2C133ADB0017385D /* HomeView.swift */,
+				FDF6E0642C1373250017385D /* HomeViewUIComponents.swift */,
 			);
-			path = ContentView;
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */ = {
 			isa = PBXGroup;
 			children = (
-				FD73D6742A1199DF005E5E49 /* RegistrarDiario.swift */,
-				FD73D6762A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift */,
+				FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */,
 				FDAE47B72A0286E80095FB09 /* Registrar.swift */,
 			);
 			path = RegistrarGratidao;
@@ -100,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */,
+				FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */,
+				FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */,
 			);
 			path = DetalhamentoGratidao;
 			sourceTree = "<group>";
@@ -107,7 +181,11 @@
 		FDAE479D2A02864C0095FB09 = {
 			isa = PBXGroup;
 			children = (
+				FDE5FE3C2B7EF85400097000 /* StreakWidgetExtension.entitlements */,
+				FDE5FE3B2B7EF74300097000 /* Gratify.entitlements */,
 				FDAE47A82A02864C0095FB09 /* Greatfy */,
+				FDE5FE292B7EF0F600097000 /* StreakWidget */,
+				FDE5FE242B7EF0F600097000 /* Frameworks */,
 				FDAE47A72A02864C0095FB09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FDAE47A62A02864C0095FB09 /* Gratify.app */,
+				FDE5FE232B7EF0F600097000 /* StreakWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,14 +202,14 @@
 		FDAE47A82A02864C0095FB09 /* Greatfy */ = {
 			isa = PBXGroup;
 			children = (
-				FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */,
+				FDE8BE922AE9B7F30041F688 /* Handler */,
 				FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */,
-				FD8BE7EE2A1E6AD800317EF4 /* ElementosdeFora.swift */,
 				FD46DD0C2A13BBD80047C614 /* Dados.swift */,
-				FD4F403C2A29206D008F68E8 /* DataModel */,
+				FD4F403C2A29206D008F68E8 /* PersistenceController */,
 				FD4F403B2A292035008F68E8 /* Views */,
 				FDAE47AD2A02864D0095FB09 /* Assets.xcassets */,
 				FDAE47AF2A02864D0095FB09 /* Preview Content */,
+				FDE8BE952AEA111E0041F688 /* ConfigurarNotificação.swift */,
 			);
 			path = Greatfy;
 			sourceTree = "<group>";
@@ -143,6 +222,73 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FDDDCA562B82F5170045B60D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */,
+				FDDDCA572B82F5290045B60D /* PopupErro.swift */,
+				FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */,
+				FD10641E2C149CA700DF1B98 /* CameraView.swift */,
+				FD1064202C149CC100DF1B98 /* ImagePicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FDE5FE1A2B7DD0B400097000 /* AnimacaoStreakAumentando */ = {
+			isa = PBXGroup;
+			children = (
+				FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */,
+			);
+			path = AnimacaoStreakAumentando;
+			sourceTree = "<group>";
+		};
+		FDE5FE242B7EF0F600097000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDE5FE252B7EF0F600097000 /* WidgetKit.framework */,
+				FDE5FE272B7EF0F600097000 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDE5FE292B7EF0F600097000 /* StreakWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FDE5FE2A2B7EF0F600097000 /* StreakWidgetBundle.swift */,
+				FDE5FE2C2B7EF0F600097000 /* StreakWidget.swift */,
+				FDE5FE2E2B7EF0F800097000 /* Assets.xcassets */,
+				FDE5FE302B7EF0F800097000 /* Info.plist */,
+				FDE5FE382B7EF2DF00097000 /* Color.swift */,
+			);
+			path = StreakWidget;
+			sourceTree = "<group>";
+		};
+		FDE8BE8F2AE9AC990041F688 /* InformacaoGratidao */ = {
+			isa = PBXGroup;
+			children = (
+				FDE8BE902AE9ACB00041F688 /* InformacaoGratidao.swift */,
+			);
+			path = InformacaoGratidao;
+			sourceTree = "<group>";
+		};
+		FDE8BE922AE9B7F30041F688 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				FDE8BE932AE9B8010041F688 /* NotificacaoHandler.swift */,
+				FDE5FE1D2B7E59FE00097000 /* HapticHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		FDF6E0582C133A8A0017385D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FDF6E0622C1347FA0017385D /* ListItem.swift */,
+				FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,15 +299,34 @@
 				FDAE47A22A02864C0095FB09 /* Sources */,
 				FDAE47A32A02864C0095FB09 /* Frameworks */,
 				FDAE47A42A02864C0095FB09 /* Resources */,
+				FDE5FE372B7EF0F800097000 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FDE5FE322B7EF0F800097000 /* PBXTargetDependency */,
 			);
 			name = Gratify;
 			productName = Greatfy;
 			productReference = FDAE47A62A02864C0095FB09 /* Gratify.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FDE5FE222B7EF0F600097000 /* StreakWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDE5FE342B7EF0F800097000 /* Build configuration list for PBXNativeTarget "StreakWidgetExtension" */;
+			buildPhases = (
+				FDE5FE1F2B7EF0F600097000 /* Sources */,
+				FDE5FE202B7EF0F600097000 /* Frameworks */,
+				FDE5FE212B7EF0F600097000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreakWidgetExtension;
+			productName = StreakWidgetExtension;
+			productReference = FDE5FE232B7EF0F600097000 /* StreakWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -170,11 +335,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					FDAE47A52A02864C0095FB09 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					FDE5FE222B7EF0F600097000 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -192,6 +360,7 @@
 			projectRoot = "";
 			targets = (
 				FDAE47A52A02864C0095FB09 /* Gratify */,
+				FDE5FE222B7EF0F600097000 /* StreakWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +375,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDE5FE212B7EF0F600097000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDE5FE2F2B7EF0F800097000 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -213,24 +390,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4F40482A2A5F7D008F68E8 /* BarraDeAcoesView.swift in Sources */,
+				FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */,
 				FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */,
-				FD4F40432A293415008F68E8 /* ContentView.swift in Sources */,
-				FD8BE7EF2A1E6AD800317EF4 /* ElementosdeFora.swift in Sources */,
-				FD73D6772A119ACB005E5E49 /* RegistrarImagemGratidaoView.swift in Sources */,
-				FD4F40462A2A5E4F008F68E8 /* ElementoLista.swift in Sources */,
+				FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */,
+				FDE8BE962AEA111E0041F688 /* ConfigurarNotificação.swift in Sources */,
+				FDF6E0652C1373250017385D /* HomeViewUIComponents.swift in Sources */,
+				FDE5FE1C2B7DD0C700097000 /* StreakAumentandoView.swift in Sources */,
+				FDF6E0632C1347FA0017385D /* ListItem.swift in Sources */,
+				FDE8BE942AE9B8010041F688 /* NotificacaoHandler.swift in Sources */,
 				FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */,
 				FDAE47B82A0286E80095FB09 /* Registrar.swift in Sources */,
 				FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */,
 				FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */,
+				FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */,
+				FDE8BE912AE9ACB00041F688 /* InformacaoGratidao.swift in Sources */,
 				FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */,
-				FD73D6752A1199DF005E5E49 /* RegistrarDiario.swift in Sources */,
+				FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */,
+				FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */,
+				FDE5FE1E2B7E59FE00097000 /* HapticHandler.swift in Sources */,
+				FDF6E0612C133C000017385D /* HomeViewModel.swift in Sources */,
+				FDDDCA582B82F5290045B60D /* PopupErro.swift in Sources */,
 				FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */,
+				FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */,
 				FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */,
+				FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDE5FE1F2B7EF0F600097000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDE5FE2B2B7EF0F600097000 /* StreakWidgetBundle.swift in Sources */,
+				FDE5FE2D2B7EF0F600097000 /* StreakWidget.swift in Sources */,
+				FDE5FE3A2B7EF3BF00097000 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDE5FE322B7EF0F800097000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDE5FE222B7EF0F600097000 /* StreakWidgetExtension */;
+			targetProxy = FDE5FE312B7EF0F800097000 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FDAE47B22A02864D0095FB09 /* Debug */ = {
@@ -351,10 +556,12 @@
 		FDAE47B52A02864D0095FB09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Gratify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Greatfy/Preview Content\"";
 				DEVELOPMENT_TEAM = 2XQLYL986B;
 				ENABLE_PREVIEWS = YES;
@@ -367,12 +574,12 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 4.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -384,10 +591,12 @@
 		FDAE47B62A02864D0095FB09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Gratify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Greatfy/Preview Content\"";
 				DEVELOPMENT_TEAM = 2XQLYL986B;
 				ENABLE_PREVIEWS = YES;
@@ -400,14 +609,81 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 4.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDE5FE352B7EF0F800097000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StreakWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreakWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StreakWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy.StreakWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDE5FE362B7EF0F800097000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StreakWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XQLYL986B;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreakWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StreakWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy.StreakWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,6 +707,15 @@
 			buildConfigurations = (
 				FDAE47B52A02864D0095FB09 /* Debug */,
 				FDAE47B62A02864D0095FB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDE5FE342B7EF0F800097000 /* Build configuration list for PBXNativeTarget "StreakWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDE5FE352B7EF0F800097000 /* Debug */,
+				FDE5FE362B7EF0F800097000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

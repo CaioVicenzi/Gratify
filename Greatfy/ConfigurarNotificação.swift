@@ -7,12 +7,50 @@
 
 import SwiftUI
 
-struct ConfigurarNotificac_a_o: View {
+struct ConfigurarNotificacao: View {
+    @Environment (\.dismiss) var dismiss
+    @State var avisar : Bool = false
+    @State var data : Date = Date()
+    let notificador = NotificacaoHandler()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                Form {
+                    Toggle(isOn: $avisar, label: {
+                        Text("Me lembrar de ser grato")
+                    })
+                    
+                    
+                    
+                    VStack{
+                        if self.avisar {
+                            DatePicker("Que horas deseja receber a notificação?", selection: $data, displayedComponents: .hourAndMinute)
+                        }
+                        Button {
+                            if self.avisar {
+                                notificador.mandarNotificacao(horas: data)
+                            } else {
+                                notificador.removerNotificacao()
+                            }
+                            dismiss()
+                        } label: {
+                            Text("Pronto")
+                        }
+                    }
+                    
+                    
+                }
+            }.navigationTitle("Configurar lembrete")
+                .navigationBarTitleDisplayMode(.inline)
+                .onAppear(perform: {
+                    avisar = notificador.existeNotificação()
+                    self.data = notificador.pegarHorarioUltimaNotificacao()
+                })
+        }
     }
 }
 
 #Preview {
-    ConfigurarNotificac_a_o()
+    ConfigurarNotificacao()
 }

@@ -11,10 +11,12 @@ struct BarraDePesquisaFiltro: View {
     @Binding var pesquisa:String
     @Binding var filtrado:Bool
     
+    @State var nomeImagem : String = "line.3.horizontal.decrease.circle"
     
     var body: some View {
         HStack{
             TextField("Pesquisar", text: $pesquisa).padding(7).padding (.horizontal, 34)
+                .submitLabel(.search)
                 .background(Color(.systemGray6))
                 .cornerRadius(8).padding(.horizontal, 10)
                 .overlay(
@@ -23,7 +25,7 @@ struct BarraDePesquisaFiltro: View {
                         Image(systemName: "magnifyingglass")
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
-                            .foregroundColor(Color(.systemGray2))
+                            .foregroundColor(Color(.systemGray))
                         Spacer()
                         
                         Button {
@@ -32,40 +34,21 @@ struct BarraDePesquisaFiltro: View {
                             // Se tiver algo escrito no searchbar, aparece um xmark para que quando o usuário aperte nela, lime a pesquisa
                             if pesquisa != ""{
                                 Image(systemName: "xmark.circle.fill").foregroundColor(Color(.systemGray2))
-
+                                
                             }
                         }
                     }.padding())
             
-            //  BOTAO DE FILTRO 
-            if filtrado == false {
-                Button {
-                    filtrado.toggle()
-                } label: {
-                    Image(systemName: "line.3.horizontal.decrease.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 26.0)
-                        .foregroundColor(Color(uiColor: .systemPurple))
-                }
-            } else {
-                Button {
-                    filtrado.toggle()
-                } label: {
-                    Image(systemName: "line.3.horizontal.decrease.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 26.0)
-                        .foregroundColor(Color(uiColor: .systemPurple))
-                }
-            } // fim do botao de filtro
-            
+            //  BOTAO DE FILTRO
+            Button {
+                filtrado.toggle()
+            } label: {
+                Image(systemName: filtrado == false ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 26.0)
+                    .foregroundColor(Color(uiColor: .systemPurple))
+            }
         }
-        .padding(.bottom)
-        .padding(.horizontal) // acabou a searchbar com o filtro
-        
-        
-        Divider()
     }
-        
 }
