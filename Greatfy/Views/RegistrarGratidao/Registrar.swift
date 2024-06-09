@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct Registrar: View {
+struct RegistrarGratidaoView: View {
     @StateObject var vm = RegisterViewModel()
     
     @Environment (\.dismiss) var dismiss
@@ -74,7 +74,7 @@ struct Registrar: View {
                             } label: {
                                 Spacer()
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 10).frame(width: 144, height: 50).foregroundColor(Color(uiColor: .systemPurple))
+                                    RoundedRectangle(cornerRadius: 10).frame(width: 144, height: 50).foregroundColor(.accentColor)
                                     HStack{
                                         Image(systemName: "camera")
                                         Text("imagem").fontWeight(.semibold)
@@ -84,7 +84,7 @@ struct Registrar: View {
                                 
                             }.actionSheet(isPresented: $vm.actionSheetAparecendo) {
                                 ActionSheet(title: Text("Selecione uma imagem"), message: Text("Como você quer selecionar ela?"), buttons: [
-                                    .default(Text("Galeria").foregroundColor(.purple)){
+                                    .default(Text("Galeria").foregroundColor(.accentColor)){
                                         vm.imagePicker = true
                                     },
                                     .default(Text("Câmera")){
@@ -142,7 +142,10 @@ struct Registrar: View {
                     Button {
                         vm.saveGratitude()
                     } label: {
-                        Text("Salvar").padding().foregroundColor(Color(UIColor.systemPurple))
+                        Text("Salvar")
+                            .padding()
+                            .bold()
+                            .foregroundColor(.accentColor)
                     }.alert(isPresented: $vm.vazio) {
                         vm.returnAlert()
                     }
@@ -166,7 +169,7 @@ struct Registrar: View {
 struct Registrar_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            Registrar()
+            RegistrarGratidaoView()
         }
     }
 }

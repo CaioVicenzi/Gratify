@@ -10,7 +10,7 @@ import CoreData
 import SwiftUI
 import WidgetKit
 
-extension Registrar {
+extension RegistrarGratidaoView {
     class RegisterViewModel : ObservableObject {
         @Published var titulo:String = ""
         @Published var descricao:String = ""

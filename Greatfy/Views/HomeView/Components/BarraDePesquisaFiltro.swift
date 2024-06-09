@@ -47,7 +47,7 @@ struct BarraDePesquisaFiltro: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 26.0)
-                    .foregroundColor(Color(uiColor: .systemPurple))
+                    .foregroundColor(.accentColor)
             }
         }
     }

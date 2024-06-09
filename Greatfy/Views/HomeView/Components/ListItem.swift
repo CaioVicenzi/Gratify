@@ -30,7 +30,8 @@ struct ListItem: View {
                 Spacer()
                 
                 if gratidao.favoritado{
-                    Image(systemName: "heart.fill").foregroundColor(Color(.systemPurple))
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.accentColor)
                 }
             }
         }
@@ -63,7 +64,7 @@ struct ListItem: View {
                 
                 Image(systemName: "heart")
                 
-            }.tint(gratidao.favoritado ? Color(.brightBlue) : Color(.systemPurple))
+            }.tint(gratidao.favoritado ? Color(.brightBlue) : .accentColor)
         }
         .sheet(item: $sharedItem) { item in
             if let titulo = item.titulo, let descricao = item.descricao, let data = item.data {

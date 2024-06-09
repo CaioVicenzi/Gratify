@@ -67,7 +67,7 @@ extension DetalhamentoView {
         } label: {
             Text("Feito")
                 .fontWeight(.bold)
-                .foregroundColor(Color(.systemPurple))
+                .foregroundColor(.accentColor)
         }
         .alert(isPresented: $vm.camposVazios) {
             Alert(title: Text("Um dos campos não pode estar vazio..."))
@@ -111,7 +111,7 @@ extension DetalhamentoView {
             Text("Adicionar imagem")
         }.actionSheet(isPresented: $vm.adicionarImagem, content: {
             ActionSheet(title: Text("Selecione uma imagem"), message: Text("Como você quer selecionar ela?"), buttons: [
-                .default(Text("Galeria").foregroundColor(.purple)){
+                .default(Text("Galeria").foregroundColor(.accentColor)){
                     vm.imagePicker = true
                 },
                 .default(Text("Câmera")){

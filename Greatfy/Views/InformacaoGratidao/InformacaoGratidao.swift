@@ -23,7 +23,7 @@ struct InformacaoGratidao: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.vertical)
-                        .foregroundColor(Color.purple)
+                        .foregroundColor(Color.accentColor)
                     
                     Text("A gratidão é uma emoção positiva em que você se sente agradecido. Quando você pratica a gratidão, responde com sentimentos de bondade e generosidade a todas as coisas que acontecem com você.")
                         .foregroundStyle(Color.secondary)
@@ -32,7 +32,7 @@ struct InformacaoGratidao: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.vertical)
-                        .foregroundColor(Color(UIColor.systemPurple))
+                        .foregroundColor(Color.accentColor)
                     Text("A gratidão trás diversos benefícios como bem-estar, diminuição do estresse e ajuda a prevenir a depressão. Pessoas mais gratas possuem sistema imunológico mais forte e dormem melhor. \nUm estudo conduzido com 300 pessoas concluiu que pessoas que praticam a gratidão possuem uma melhor saúde mental do que os indivíduos que não praticam. \nA gratidão ajuda a valorizar aquilo que o indivíduo já tem e diminui consideravelmente a ansiedade que ele possui por coisas que ele não tem ou que desejaria ter.")
                         .foregroundStyle(Color.secondary)
                     
@@ -40,7 +40,7 @@ struct InformacaoGratidao: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.vertical)
-                        .foregroundColor(Color(UIColor.systemPurple))
+                        .foregroundColor(Color.accentColor)
                     Text("Salvando a sua gratidão diária no seu Gratify!")
                         .foregroundStyle(Color.secondary)
                     
@@ -53,7 +53,7 @@ struct InformacaoGratidao: View {
                             .rotationEffect(.degrees(showLinks ? 90 : 0))
                             
                     }
-                    .foregroundColor(Color(UIColor.systemPurple))
+                    .foregroundColor(Color.accentColor)
                     .onTapGesture {
                         withAnimation {
                             self.showLinks.toggle()

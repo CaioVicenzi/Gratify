@@ -37,7 +37,7 @@ struct DetalhamentoView: View {
                     dataExibida
                 }
                 .padding(.horizontal)
-                .foregroundColor(colorScheme == .dark ?  Color(.pinky): Color(UIColor.systemPurple))
+                .foregroundColor(Color.accentColor)
                     
                 descricao
                 imagem

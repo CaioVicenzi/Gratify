@@ -77,8 +77,8 @@ extension DetalhamentoView {
             if tituloTemporario == "" || descricaoTemporaria == "" {
                 camposVazios = true
             } else {
-                tituloTemporario = tituloTemporario.capitalized
-                descricaoTemporaria = descricaoTemporaria.capitalized
+                tituloTemporario = tituloTemporario
+                descricaoTemporaria = descricaoTemporaria
                 GratidaoController().editarGratidao(gratidao: gratidao, titulo: tituloTemporario, descricao: descricaoTemporaria, data: dataTemporaria, imagem: imagemTemporaria, context: moc)
                 HapticHandler.instance.notificacao(tipo: .success)
             }
