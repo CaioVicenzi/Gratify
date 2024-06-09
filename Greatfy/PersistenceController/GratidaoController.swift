@@ -9,11 +9,17 @@ import Foundation
 import CoreData
 
 class GratidaoController:ObservableObject {
-    let container = NSPersistentContainer(name: "GratidaoModel")
+    let container : NSPersistentContainer
     
     static let compartilhado : GratidaoController  = GratidaoController()
     
     init(){
+        
+        self.container = NSPersistentContainer(name: "GratidaoModel")
+        let url = URL.storeURL(for: "group.caio.gratify", databaseName: "GratidaoModel")
+        let storeDescription = NSPersistentStoreDescription(url: url)
+        container.persistentStoreDescriptions = [storeDescription]
+        
         container.loadPersistentStores{desc, error in
             if let error = error {
                 print("Deu um erro ao carregar o dado \(error.localizedDescription)")
@@ -70,4 +76,13 @@ class GratidaoController:ObservableObject {
         salvar(context: context)
     }
     
+}
+
+
+public extension URL {
+    static func storeURL (for appGroup : String, databaseName : String) -> URL {
+        guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroup) else {fatalError("Não conseguimos criar uma URL para \(appGroup)")}
+        
+        return fileContainer.appendingPathComponent("\(databaseName).sqlite")
+    }
 }

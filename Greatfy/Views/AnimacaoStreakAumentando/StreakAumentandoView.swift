@@ -11,7 +11,7 @@ struct StreakAumentandoView: View {
     @State var animarMao = false
     @State var animarTexto = false
     @State var animarBotao = false
-    @AppStorage("streak", store: UserDefaults(suiteName: "group.caio.gratify")) var streak : Int = 0
+    @AppStorage("streak", store: UserDefaults(suiteName: "group.caio.gratify")) var streak : Int = 1
     @State var mostrarContentView = false
     
     var body: some View {
