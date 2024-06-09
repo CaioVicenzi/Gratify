@@ -129,6 +129,7 @@
 		FD4F403B2A292035008F68E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD8576E32C154F1100EDFB28 /* ConfigurarNotificacaoView */,
 				FDDDCA562B82F5170045B60D /* Components */,
 				FDE5FE1A2B7DD0B400097000 /* AnimacaoStreakAumentando */,
 				FDE8BE8F2AE9AC990041F688 /* InformacaoGratidao */,
@@ -178,6 +179,14 @@
 			path = DetalhamentoGratidao;
 			sourceTree = "<group>";
 		};
+		FD8576E32C154F1100EDFB28 /* ConfigurarNotificacaoView */ = {
+			isa = PBXGroup;
+			children = (
+				FDE8BE952AEA111E0041F688 /* ConfigurarNotificação.swift */,
+			);
+			path = ConfigurarNotificacaoView;
+			sourceTree = "<group>";
+		};
 		FDAE479D2A02864C0095FB09 = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +218,6 @@
 				FD4F403B2A292035008F68E8 /* Views */,
 				FDAE47AD2A02864D0095FB09 /* Assets.xcassets */,
 				FDAE47AF2A02864D0095FB09 /* Preview Content */,
-				FDE8BE952AEA111E0041F688 /* ConfigurarNotificação.swift */,
 			);
 			path = Greatfy;
 			sourceTree = "<group>";

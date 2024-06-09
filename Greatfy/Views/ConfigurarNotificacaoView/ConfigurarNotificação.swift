@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+//
 struct ConfigurarNotificacao: View {
     @Environment (\.dismiss) var dismiss
     @State var avisar : Bool = false
@@ -19,9 +19,11 @@ struct ConfigurarNotificacao: View {
                 Form {
                     Toggle(isOn: $avisar, label: {
                         Text("Me lembrar de ser grato")
-                    })
-                    
-                    
+                    }).onChange(of: avisar) { _, newValue in
+                        if newValue == true {
+                            notificador.pedirPermissao()
+                        }
+                    }
                     
                     VStack{
                         if self.avisar {
@@ -45,6 +47,9 @@ struct ConfigurarNotificacao: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .onAppear(perform: {
                     avisar = notificador.existeNotificação()
+                    if avisar {
+                        notificador.pedirPermissao()
+                    }
                     self.data = notificador.pegarHorarioUltimaNotificacao()
                 })
         }

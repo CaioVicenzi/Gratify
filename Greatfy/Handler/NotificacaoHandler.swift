@@ -7,7 +7,7 @@
 
 import Foundation
 import UserNotifications
-
+//
 class NotificacaoHandler {
     static var temPermissao = false
     func pedirPermissao () {

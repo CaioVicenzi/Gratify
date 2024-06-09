@@ -6,6 +6,37 @@
         "reference" : "systemPurpleColor"
       },
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "color" : {
+        "platform" : "universal",
+        "reference" : "systemPurpleColor"
+      },
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "1.000",
+          "green" : "0.627",
+          "red" : "0.925"
+        }
+      },
+      "idiom" : "universal"
     }
   ],
   "info" : {
