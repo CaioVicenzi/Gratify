@@ -9,14 +9,18 @@ import SwiftUI
 
 @main
 struct GreatfyApp: App {
-    @StateObject private var gratidaoController = GratidaoController.compartilhado//GratidaoController()
-    
+    @StateObject private var gratidaoController = GratidaoController()
+
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                HomeView()
+                if gratidaoController.semaforo {
+                    HomeView()
+                } else {
+                    ProgressView()
+                }
             }
-            .environment(\.managedObjectContext, GratidaoController.compartilhado.container.viewContext)
+            .environment(\.managedObjectContext, gratidaoController.container.viewContext)
         }
     }
 }
