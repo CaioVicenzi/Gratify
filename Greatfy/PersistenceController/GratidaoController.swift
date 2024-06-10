@@ -49,6 +49,11 @@ class GratidaoController:ObservableObject {
                 try FileManager.default.removeItem(at: antigoDatabase)
                 print("Migração concluída com sucesso!")
                 
+                DispatchQueue.main.async {
+                    self.container.viewContext.reset()
+                    try? self.container.viewContext.save()
+                    NotificationCenter.default.post(name: .NSManagedObjectContextDidSave, object: self.container.viewContext)
+                }
                 
                 semaforo = true
             } catch {
@@ -57,13 +62,6 @@ class GratidaoController:ObservableObject {
         }
     }
     
-    func update (context: NSManagedObjectContext) {
-        DispatchQueue.main.async {
-            context.reset()
-            try? context.save()
-            NotificationCenter.default.post(name: .NSManagedObjectContextDidSave, object: context)
-        }
-    }
     
     func salvar(context: NSManagedObjectContext) {
         do {
