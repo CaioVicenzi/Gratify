@@ -18,8 +18,7 @@ struct LoadingView: View {
             Text("Isso pode levar um tempinho\(dots)")
         }
         .navigationDestination(isPresented: $finalizarEspera, destination: {
-            HomeView()
-                .navigationBarBackButtonHidden()
+            retornaHomeView()
         })
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
@@ -34,6 +33,13 @@ struct LoadingView: View {
                 }
             }
         }
+    }
+    
+    @ViewBuilder
+    func retornaHomeView () -> some View {
+        HomeView()
+            .navigationBarBackButtonHidden()
+            .toolbarTitleDisplayMode(.large)
     }
 }
 

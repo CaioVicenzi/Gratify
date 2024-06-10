@@ -7,12 +7,14 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 class GratidaoController:ObservableObject {
     let container : NSPersistentContainer
     
     static let compartilhado : GratidaoController  = GratidaoController()
     @Published var semaforo = false
+    @AppStorage ("jaMigrou") var jaMigrou : Bool = false
     
     init(){
         self.container = NSPersistentContainer(name: "GratidaoModel")
@@ -21,11 +23,14 @@ class GratidaoController:ObservableObject {
         storeDescription.shouldMigrateStoreAutomatically = true
         storeDescription.shouldInferMappingModelAutomatically = true
         container.persistentStoreDescriptions = [storeDescription]
-        container.loadPersistentStores{desc, error in
+        container.loadPersistentStores{[weak self] desc, error in
+            guard let self else {return}
             if let error = error {
                 print("Deu um erro ao carregar o dado \(error.localizedDescription)")
             } else {
-                self.migrarAntigoDatabase()
+                if !(self.jaMigrou) {
+                    self.migrarAntigoDatabase()
+                }
             }
         }
     }
@@ -48,6 +53,7 @@ class GratidaoController:ObservableObject {
                 print("Migração concluída com sucesso!")
                 
                 semaforo = true
+                jaMigrou = true
             } catch {
                 print("Erro ao migrare o banco de dados \(error.localizedDescription)")
             }
