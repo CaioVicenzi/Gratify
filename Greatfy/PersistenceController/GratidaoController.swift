@@ -45,6 +45,12 @@ class GratidaoController:ObservableObject {
                 
                 try FileManager.default.removeItem(at: antigoDatabase)
                 print("Migração concluída com sucesso!")
+                
+                DispatchQueue.main.async {
+                    self.container.viewContext.reset()
+                    try? self.container.viewContext.save()
+                    NotificationCenter.default.post(name: .NSManagedObjectContextDidSave, object: self.container.viewContext)
+                }
             } catch {
                 print("Erro ao migrare o banco de dados \(error.localizedDescription)")
             }
