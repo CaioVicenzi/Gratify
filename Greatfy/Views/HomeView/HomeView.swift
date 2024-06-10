@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm = HomeViewModel()
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.dataInclusao, order: .reverse)]) var gratidoes:FetchedResults<Gratidao>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: true)]) var gratidoes:FetchedResults<Gratidao>
     @Environment (\.colorScheme) var colorScheme
+    @Environment (\.managedObjectContext) var moc
     
     var body: some View {
         ZStack {

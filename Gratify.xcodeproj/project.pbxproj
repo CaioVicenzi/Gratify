@@ -18,7 +18,6 @@
 		FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
 		FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
 		FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */; };
-		FD64C9082C17447200E11A6C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD64C9072C17447200E11A6C /* LoadingView.swift */; };
 		FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */; };
 		FD8576E42C15601000EDFB28 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
 		FD8576E52C15601300EDFB28 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
@@ -82,7 +81,6 @@
 		FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GratidaoModel.xcdatamodel; sourceTree = "<group>"; };
 		FD4F40402A29217E008F68E8 /* GratidaoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratidaoController.swift; sourceTree = "<group>"; };
 		FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoVoltar.swift; sourceTree = "<group>"; };
-		FD64C9072C17447200E11A6C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoView.swift; sourceTree = "<group>"; };
 		FD8576E62C15603200EDFB28 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FDAE47A62A02864C0095FB09 /* Gratify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +140,6 @@
 				FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */,
 				FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */,
 				FD4F40442A2A5E0E008F68E8 /* HomeView */,
-				FD64C9072C17447200E11A6C /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,7 +421,6 @@
 				FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */,
 				FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */,
 				FDE5FE1E2B7E59FE00097000 /* HapticHandler.swift in Sources */,
-				FD64C9082C17447200E11A6C /* LoadingView.swift in Sources */,
 				FDF6E0612C133C000017385D /* HomeViewModel.swift in Sources */,
 				FDDDCA582B82F5290045B60D /* PopupErro.swift in Sources */,
 				FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */,

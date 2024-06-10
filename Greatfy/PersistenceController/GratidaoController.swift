@@ -14,7 +14,6 @@ class GratidaoController:ObservableObject {
     
     static let compartilhado : GratidaoController  = GratidaoController()
     @Published var semaforo = false
-    @AppStorage ("jaMigrou") var jaMigrou : Bool = false
     
     init(){
         self.container = NSPersistentContainer(name: "GratidaoModel")
@@ -28,9 +27,7 @@ class GratidaoController:ObservableObject {
             if let error = error {
                 print("Deu um erro ao carregar o dado \(error.localizedDescription)")
             } else {
-                if !(self.jaMigrou) {
-                    self.migrarAntigoDatabase()
-                }
+                self.migrarAntigoDatabase()
             }
         }
     }
@@ -52,11 +49,19 @@ class GratidaoController:ObservableObject {
                 try FileManager.default.removeItem(at: antigoDatabase)
                 print("Migração concluída com sucesso!")
                 
+                
                 semaforo = true
-                jaMigrou = true
             } catch {
                 print("Erro ao migrare o banco de dados \(error.localizedDescription)")
             }
+        }
+    }
+    
+    func update (context: NSManagedObjectContext) {
+        DispatchQueue.main.async {
+            context.reset()
+            try? context.save()
+            NotificationCenter.default.post(name: .NSManagedObjectContextDidSave, object: context)
         }
     }
     
