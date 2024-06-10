@@ -9,52 +9,46 @@ import Foundation
 import CoreData
 
 class GratidaoController:ObservableObject {
-    @Published var container : NSPersistentContainer
+    let container : NSPersistentContainer
     
     static let compartilhado : GratidaoController  = GratidaoController()
-    static let antigo : GratidaoController = GratidaoController(antigo: true)
     
-    init(antigo : Bool = false){
-        
-        if antigo {
-            self.container = NSPersistentContainer(name: "GratidaoModel")
-            migrarDatabase()
-        } else {
-            self.container = NSPersistentContainer(name: "GratidaoModel")
-            let url = URL.storeURL(for: "group.caio.gratify", databaseName: "GratidaoModel")
-            let storeDescription = NSPersistentStoreDescription(url: url)
-            container.persistentStoreDescriptions = [storeDescription]
-        }
+    init(){
+        self.container = NSPersistentContainer(name: "GratidaoModel")
+        let url = URL.storeURL(for: "group.caio.gratify", databaseName: "GratidaoModel")
+        let storeDescription = NSPersistentStoreDescription(url: url)
+        storeDescription.shouldMigrateStoreAutomatically = true
+        storeDescription.shouldInferMappingModelAutomatically = true
+        container.persistentStoreDescriptions = [storeDescription]
         container.loadPersistentStores{desc, error in
             if let error = error {
                 print("Deu um erro ao carregar o dado \(error.localizedDescription)")
+            } else {
+                self.migrarAntigoDatabase()
             }
         }
     }
     
-    func migrarDatabase () {
-        // pegar todos os dados do databaseAntigo
-        let req = Gratidao.fetchRequest()
-        let results = try? GratidaoController.antigo.container.viewContext.fetch(req)
-        guard let results else { print("Erro ao carregar o database antigo"); return }
-        
-        // jogar os dados no database novo
-        for result in results {
-            let gratidaoCopiada = Gratidao(context: GratidaoController.compartilhado.container.viewContext)
-            if let titulo = result.titulo { gratidaoCopiada.titulo = titulo }
-            if let descricao = result.descricao { gratidaoCopiada.descricao = descricao }
-            if let imagem = result.imagem { gratidaoCopiada.imagem = imagem }
-            if let data = result.data { gratidaoCopiada.data = data }
-            if let dataInclusao = result.dataInclusao { gratidaoCopiada.dataInclusao = dataInclusao }
-            gratidaoCopiada.favoritado = result.favoritado
-            
-            salvar(context: GratidaoController.compartilhado.container.viewContext)
-            self.excluirGratidao(gratidao: result, context: GratidaoController.antigo.container.viewContext)
+    
+    private func migrarAntigoDatabase () {
+        let antigoDatabase = NSPersistentContainer.defaultDirectoryURL().appendingPathComponent("GratidaoModel.sqlite")
+        if FileManager.default.fileExists(atPath: antigoDatabase.path) {
+            do {
+                let oldStore = try container.persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: antigoDatabase)
+                
+                try container.persistentStoreCoordinator.replacePersistentStore(
+                    at: container.persistentStoreDescriptions.first!.url!,
+                    withPersistentStoreFrom: antigoDatabase,
+                    ofType: NSSQLiteStoreType)
+                
+                try container.persistentStoreCoordinator.remove(oldStore)
+                
+                try FileManager.default.removeItem(at: antigoDatabase)
+                print("Migração concluída com sucesso!")
+            } catch {
+                print("Erro ao migrare o banco de dados \(error.localizedDescription)")
+            }
         }
-        
-        
-        
-        // apagar os dados do database antigo
     }
     
     func salvar(context: NSManagedObjectContext) {
