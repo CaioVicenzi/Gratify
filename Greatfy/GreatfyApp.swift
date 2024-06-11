@@ -10,12 +10,17 @@ import SwiftUI
 @main
 struct GreatfyApp: App {
     @StateObject private var gratidaoController = GratidaoController()
-
+    @AppStorage ("alreadyUploaded") var alreadyUploaded = false
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 if gratidaoController.semaforo {
-                    HomeView()
+                    if alreadyUploaded {
+                        HomeView()
+                    } else {
+                        AlreadyUploadedView()
+                    }
                 } else {
                     ProgressView()
                 }
