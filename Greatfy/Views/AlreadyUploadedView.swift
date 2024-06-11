@@ -22,7 +22,7 @@ struct AlreadyUploadedView: View {
             Spacer()
             
             if knowMore {
-                Text("Migramos o banco de dados antigo para um novo, nós usamos esse novo banco de dados para o widget do app poder ter acesso às alterações nos dados em tempo real, o aplicativo deve ser reiniciado para finalizar a migração corretamento, somente aperte no botão 'reiniciar' e abra o app novamente. Agradecemos a compreensão!")
+                Text("Migramos o banco de dados antigo para um novo, nós usamos esse novo banco de dados para o widget do app poder ter acesso às alterações nos dados em tempo real, o aplicativo deve ser reiniciado para finalizar a migração corretamente, somente é necessário apertar no botão 'reiniciar' e abra o app. Agradecemos a compreensão!")
                     .foregroundStyle(.primary)
                     .padding()
                     .background(Color(.pinky).opacity(0.5))
