@@ -23,8 +23,8 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for dayOffset in 0 ..< 7 {
-            let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
+        for dayOffset in 0 ..< 24 {
+            let entryDate = Calendar.current.date(byAdding: .hour, value: dayOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate)
             entries.append(entry)
         }
@@ -40,14 +40,13 @@ struct SimpleEntry: TimelineEntry {
 
 struct StreakWidgetEntryView : View {
     var entry: Provider.Entry
-    @AppStorage("streak", store: UserDefaults(suiteName: "group.caio.gratify")) var streak : Int = 0
-    @AppStorage("hojeRegistrou", store: UserDefaults(suiteName: "group.caio.gratify")) var hojeRegistrou : Bool = false
+    var dataService : DataService = DataService()
 
     var body: some View {
         VStack {
             
             Group{
-                Text("\(streak) dia\(streak > 1 ? "s" : "") de")
+                Text("\(dataService.streak) dia\(dataService.streak > 1 ? "s" : "") de")
                     .font(.title3)
                     .bold()
                 
@@ -62,31 +61,23 @@ struct StreakWidgetEntryView : View {
                     .scaledToFit()
                     .frame(width: 40)
                 
-                if !hojeRegistrou {
+                if !dataService.wroteGratitudeToday {
                     Text("Seja grato!")
                 }
                 
             }
             .foregroundStyle(.white.opacity(0.9))
+            .containerBackground(LinearGradient(colors: dataService.wroteGratitudeToday ? [Color.accentColor, .pink] : [.gray, Color(.systemGray3)], startPoint: .top, endPoint: .bottom), for: .widget)
         }
     }
 }
 
 struct StreakWidget: Widget {
     let kind: String = "StreakWidget"
-    @AppStorage("hojeRegistrou", store: UserDefaults(suiteName: "group.caio.gratify")) var hojeRegistrou : Bool = false
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            
-            if #available(iOS 17.0, *) {
-                StreakWidgetEntryView(entry: entry)
-                    .containerBackground(LinearGradient(colors: hojeRegistrou ? [Color.corPrincipal, .corSecundaria] : [.gray, Color(.systemGray3)], startPoint: .top, endPoint: .bottom), for: .widget)
-            } else {
-                StreakWidgetEntryView(entry: entry)
-                    //.padding()
-                    //.background()
-            }
+            StreakWidgetEntryView(entry: entry)
         }
         .supportedFamilies([.systemSmall])
         .configurationDisplayName("Streak de gratidão")

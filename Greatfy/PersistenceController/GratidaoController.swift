@@ -7,19 +7,61 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 class GratidaoController:ObservableObject {
-    let container = NSPersistentContainer(name: "GratidaoModel")
+    let container : NSPersistentContainer
+
     
     static let compartilhado : GratidaoController  = GratidaoController()
+    @Published var semaforo = false
     
     init(){
-        container.loadPersistentStores{desc, error in
+        self.container = NSPersistentContainer(name: "GratidaoModel")
+        let url = URL.storeURL(for: "group.caio.gratify", databaseName: "GratidaoModel")
+        let storeDescription = NSPersistentStoreDescription(url: url)
+        storeDescription.shouldMigrateStoreAutomatically = true
+        storeDescription.shouldInferMappingModelAutomatically = true
+        container.persistentStoreDescriptions = [storeDescription]
+        container.loadPersistentStores{[weak self] desc, error in
+            guard let self else {return}
             if let error = error {
                 print("Deu um erro ao carregar o dado \(error.localizedDescription)")
+            } else {
+                self.migrarAntigoDatabase()
             }
         }
     }
+    
+    
+    private func migrarAntigoDatabase () {
+        
+        let antigoDatabase = NSPersistentContainer.defaultDirectoryURL().appendingPathComponent("GratidaoModel.sqlite")
+        if FileManager.default.fileExists(atPath: antigoDatabase.path) {
+            do {
+                
+                let oldStore = try container.persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: antigoDatabase)
+                
+                try container.persistentStoreCoordinator.replacePersistentStore(
+                    at: container.persistentStoreDescriptions.first!.url!,
+                    withPersistentStoreFrom: antigoDatabase,
+                    ofType: NSSQLiteStoreType)
+                
+                try container.persistentStoreCoordinator.remove(oldStore)
+                
+                try FileManager.default.removeItem(at: antigoDatabase)
+                print("Migração concluída com sucesso!")
+                
+                semaforo = true
+            } catch {
+                print("Erro ao migrare o banco de dados \(error.localizedDescription)")
+            }
+        }
+        else {
+            semaforo = true
+        }
+    }
+    
     
     func salvar(context: NSManagedObjectContext) {
         do {
@@ -70,4 +112,13 @@ class GratidaoController:ObservableObject {
         salvar(context: context)
     }
     
+}
+
+
+public extension URL {
+    static func storeURL (for appGroup : String, databaseName : String) -> URL {
+        guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroup) else {fatalError("Não conseguimos criar uma URL para \(appGroup)")}
+        
+        return fileContainer.appendingPathComponent("\(databaseName).sqlite")
+    }
 }

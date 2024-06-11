@@ -10,11 +10,20 @@ import SwiftUI
 @main
 struct GreatfyApp: App {
     @StateObject private var gratidaoController = GratidaoController()
+    @AppStorage ("alreadyUploaded") var alreadyUploaded = false
     
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                HomeView()
+                if gratidaoController.semaforo {
+                    if alreadyUploaded {
+                        HomeView()
+                    } else {
+                        AlreadyUploadedView()
+                    }
+                } else {
+                    ProgressView()
+                }
             }
             .environment(\.managedObjectContext, gratidaoController.container.viewContext)
         }
