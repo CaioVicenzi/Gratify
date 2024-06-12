@@ -14,22 +14,33 @@ class DataService : ObservableObject {
     var controller = GratidaoController.compartilhado.container.viewContext
     
     init() {
-        calculateStreak()
+        let request = Gratidao.fetchRequest()
+        let gratidoes = try? controller.fetch(request)
+        calculateStreak(gratidoes)
+        gratifiedToday(gratidoes)
+        
     }
     
-    func calculateStreak () {
-        var request = Gratidao.fetchRequest()
-        var gratidoes = try? controller.fetch(request)
+    func gratifiedToday (_ gratidoes : [Gratidao]?) {
+        guard let gratidoes else {
+            print("Não anotou nenhuma gratidão hoje porque o gratidoes nao existe...")
+            wroteGratitudeToday = false
+            return
+        }
         
+        if let primeira = gratidoes.first?.data {
+            if Calendar.current.isDateInToday(primeira) {
+                wroteGratitudeToday = true
+                return
+            }
+        }
+    }
+    
+    func calculateStreak (_ gratidoes : [Gratidao]?) {
         guard let gratidoes else {
             streak = 0
             print("Nenhuma gratitude hoje")
             return
-        }
-        
-        // trecho de código importante haja vista que sem ele se tivesse nenhuma gratidão ele não entraria no bloco de código onde iria se calcular se hoje ele registrou ou não.
-        if gratidoes.count == 0 {
-            self.wroteGratitudeToday = false
         }
         
         var streak = 0
@@ -44,11 +55,6 @@ class DataService : ObservableObject {
         
         // segundo: verificar se hoje ou ontem foi grato
         if let ultimaGratidao = copiasGratidao.first?.dataInclusao {
-            if Calendar.current.isDateInToday(ultimaGratidao) {
-                wroteGratitudeToday = true
-            } else {
-                wroteGratitudeToday = false
-            }
             
             if Calendar.current.isDateInToday(ultimaGratidao) || Calendar.current.isDateInYesterday(ultimaGratidao) {
                 streak += 1

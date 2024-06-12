@@ -23,8 +23,8 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for dayOffset in 0 ..< 24 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: dayOffset, to: currentDate)!
+        for dayOffset in 0 ..< 200 {
+            let entryDate = Calendar.current.date(byAdding: .minute, value: dayOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate)
             entries.append(entry)
         }
@@ -74,8 +74,11 @@ struct StreakWidgetEntryView : View {
 
 struct StreakWidget: Widget {
     let kind: String = "StreakWidget"
+    @Environment (\.widgetFamily) var family
 
     var body: some WidgetConfiguration {
+        
+        
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             StreakWidgetEntryView(entry: entry)
         }
@@ -88,6 +91,5 @@ struct StreakWidget: Widget {
 #Preview(as: .systemSmall) {
     StreakWidget()
 } timeline: {
-    SimpleEntry(date: .now)
     SimpleEntry(date: .now)
 }

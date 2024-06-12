@@ -29,7 +29,7 @@ extension HomeView {
             Image(systemName: "info.circle")
         }
         .sheet(isPresented: $vm.showInfoSheet, content: {
-            InformacaoGratidao()
+            InformationPage()
         })
     }
     

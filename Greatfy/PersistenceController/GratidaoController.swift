@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import SwiftUI
+import WidgetKit
 
 class GratidaoController:ObservableObject {
     let container : NSPersistentContainer
@@ -66,6 +67,7 @@ class GratidaoController:ObservableObject {
     func salvar(context: NSManagedObjectContext) {
         do {
             try context.save()
+            WidgetCenter.shared.reloadTimelines(ofKind: "StreakWidget")
         } catch {
             print("Deu um erro ao salvar!!!")
         }

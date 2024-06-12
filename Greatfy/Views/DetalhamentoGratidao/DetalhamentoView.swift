@@ -66,3 +66,12 @@ struct DetalhamentoView: View {
         .padding(.bottom)
     }
 }
+
+#Preview {
+    let gratidaoPreview = Gratidao()
+    gratidaoPreview.titulo = "Caio"
+    gratidaoPreview.descricao = "Oliveira"
+    gratidaoPreview.imagem =  UIImage(named: "nuvemrosa")?.pngData()
+    
+    return DetalhamentoView(gratidao: gratidaoPreview)
+}
