@@ -57,7 +57,7 @@ extension HomeView {
         
     var rollDiceButton : some View {
         Button {
-            vm.rollDice()
+            vm.rollDice(gratidoes)
         } label: {
             Image(systemName: "dice")
         }
@@ -73,10 +73,11 @@ extension HomeView {
     
     var streakCapsule : some View {
         HStack (spacing: 5){
+            let streak = vm.calculateStreak(gratidoes)
             if vm.showMaximizedStreak{
-                Text("\(vm.streak) dia\(vm.streak > 1 ? "s" : "") de streak")
+                Text("\(streak) dia\(streak > 1 ? "s" : "") de streak")
             } else {
-                Text(vm.streak.description)
+                Text(streak.description)
             }
             Image(systemName: "flame.fill")
         }
@@ -86,7 +87,7 @@ extension HomeView {
         .font(.caption2)
         .bold()
         .frame(width: vm.showMaximizedStreak ? 200 : 60)
-        .background(vm.wroteGratitudeToday ? Color(.brightBlue) : .gray)
+        .background(vm.wroteGratitudeToday(gratidoes) ? Color(.brightBlue) : .gray)
         .clipShape(RoundedRectangle(cornerRadius: 50))
         .onTapGesture {
             HapticHandler.instance.impacto(estilo: .light)

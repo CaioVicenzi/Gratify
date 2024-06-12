@@ -9,12 +9,13 @@ import SwiftUI
 import WidgetKit
 
 struct RegistrarGratidaoView: View {
-    @StateObject var vm = RegisterViewModel()
+    @StateObject var vm : RegisterViewModel = RegisterViewModel()
     
     @Environment (\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     @Environment (\.managedObjectContext) var moc
-    
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
+
     var body: some View {
         VStack {
             //RegistrarDiarioView(titulo: $titulo, descricao: $descricao, data: $data, imagemData: $imagemData)
@@ -143,7 +144,7 @@ struct RegistrarGratidaoView: View {
             ToolbarItem (placement: .navigationBarTrailing) {
                 VStack{
                     Button {
-                        vm.saveGratitude()
+                        vm.saveGratitude(fetchedResults: gratidoes)
                     } label: {
                         Text("Salvar")
                             .padding()
@@ -164,7 +165,7 @@ struct RegistrarGratidaoView: View {
             }
         })
         .onAppear(perform: {
-            vm.configVM(moc: moc, dismiss: dismiss)
+            vm.configVM(moc: moc, dismiss: dismiss, fetchedResults: gratidoes)
         })
     }
 }

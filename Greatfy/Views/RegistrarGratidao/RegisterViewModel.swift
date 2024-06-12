@@ -30,18 +30,15 @@ extension RegistrarGratidaoView {
         @Published var camera = false
         @Published var mostrarPopup : Bool = false
         
-        @AppStorage("hojeRegistrou", store: UserDefaults(suiteName: "group.caio.gratify")) var hojeRegistrou : Bool = false
-
-        
         var moc : NSManagedObjectContext? = nil
         var dismiss : DismissAction?
         
-        func configVM (moc : NSManagedObjectContext, dismiss: DismissAction) {
+        func configVM (moc : NSManagedObjectContext, dismiss: DismissAction, fetchedResults : FetchedResults<Gratidao>) {
             self.moc = moc
             self.dismiss = dismiss
         }
         
-        func saveGratitude () {
+        func saveGratitude (fetchedResults : FetchedResults<Gratidao>) {
             guard let moc else {
                 print("Não conseguimos salvar a gratidão porque não tem moc")
                 return
@@ -50,14 +47,11 @@ extension RegistrarGratidaoView {
             if (!(titulo.isEmpty) && !(descricao.isEmpty)) {
                 HapticHandler.instance.notificacao(tipo: .success)
                 GratidaoController().adicionarGratidaoPorImagem(titulo: titulo, descricao: descricao, imageData: imagemData, data: data, context: moc)
-                if hojeRegistrou {
+                if gratifiedToday(fetchedResults: fetchedResults) {
                     if let dismiss {
                         dismiss()
                     }
                 } else {
-                    WidgetCenter.shared.reloadTimelines(ofKind: "StreakWidget")
-
-                    // atualizar widget
                     mostrarStreakAumentando = true
                 }
                 
@@ -91,6 +85,12 @@ extension RegistrarGratidaoView {
                     mostrarPopup = true
                 }
             }
+        }
+        
+        func gratifiedToday (fetchedResults : FetchedResults<Gratidao>) -> Bool {
+            let streakCalculator = StreakCalculator()
+            streakCalculator.configCalculator(fetchedResults: fetchedResults)
+            return streakCalculator.didGratifyToday()
         }
     }
 }

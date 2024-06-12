@@ -11,9 +11,10 @@ struct StreakAumentandoView: View {
     @State var animarMao = false
     @State var animarTexto = false
     @State var animarBotao = false
-    @AppStorage("streak", store: UserDefaults(suiteName: "group.caio.gratify")) var streak : Int = 1
     @State var mostrarContentView = false
-    
+    @Environment (\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
+
     var body: some View {
         VStack (spacing: 40) {
             
@@ -23,6 +24,7 @@ struct StreakAumentandoView: View {
             
             VStack{
                 if animarTexto {
+                    let streak = calculateStreak()
                     Text("Parabéns, você completou \(streak) dia\(streak > 1 ? "s" : "") de streak")
                     Text("Continue assim!")
                 }
@@ -81,6 +83,12 @@ struct StreakAumentandoView: View {
             .scaledToFit()
             .frame(width: animarMao ? UIScreen.main.bounds.width / 3 : UIScreen.main.bounds.width / 5)
             .foregroundStyle(.purple)
+    }
+    
+    func calculateStreak () -> Int {
+        let calculator = StreakCalculator()
+        calculator.configCalculator(fetchedResults: self.gratidoes)
+        return calculator.calculateStreak()
     }
 }
 

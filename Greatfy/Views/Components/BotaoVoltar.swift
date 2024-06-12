@@ -16,8 +16,9 @@ struct BotaoVoltar: View {
         }) {
             HStack {
                 Image(systemName: "chevron.backward")
-                Text("Início")
+                Text("Voltar")
             }
+            .bold()
         }
     }
 }

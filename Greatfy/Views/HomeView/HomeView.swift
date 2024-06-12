@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm = HomeViewModel()
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: true)]) var gratidoes:FetchedResults<Gratidao>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
     @Environment (\.colorScheme) var colorScheme
     @Environment (\.managedObjectContext) var moc
     
@@ -22,6 +22,13 @@ struct HomeView: View {
                 if gratidoes.isEmpty {
                     noGratitudeYet
                 } else {
+                    HStack {
+                        Text("Diário da gratidão".uppercased())
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
                     List {
                         ForEach(gratidoes) { gratidao in
                             if let title = gratidao.titulo {
@@ -53,9 +60,6 @@ struct HomeView: View {
                     toolbarBottom
                 }
             }
-            .onAppear(perform: {
-                self.vm.config(gratidoes: gratidoes)
-            })
         }
     }
 }
