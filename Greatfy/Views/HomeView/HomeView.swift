@@ -17,7 +17,6 @@ struct HomeView: View {
         ZStack {
             backgroundDismissKeyboard
                 .foregroundStyle(.background)
-            backgroundPinkClouds
             VStack {
                 if gratidoes.isEmpty {
                     noGratitudeYet

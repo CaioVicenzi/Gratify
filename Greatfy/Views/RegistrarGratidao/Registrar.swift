@@ -8,6 +8,111 @@
 import SwiftUI
 import WidgetKit
 
+
+
+struct RegistrarGratidaoView : View {
+    @State var page : Int = 0
+    @StateObject var vm : RegisterViewModel = RegisterViewModel()
+
+    @Environment (\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
+    @Environment (\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
+    
+    var body: some View {
+        VStack {
+            Group {
+                if page == 0 {
+                    RegistrarDescricaoView(vm: vm)
+                } else if page == 1 {
+                    RegistrarDetalhesView(vm: vm)
+                } else {
+                    RegistrarTituloView(vm: vm)
+                }
+            }
+            HStack {
+                Button("Voltar") {
+                    withAnimation {
+                        page -= 1
+                    }
+                }
+                .disabled(page == 0)
+                
+                Spacer()
+                Button {
+                    if page >= 2 {
+                        vm.saveGratitude(fetchedResults: gratidoes)
+                        dismiss()
+                    } else {
+                        withAnimation {
+                            if page == 0 {
+                                if !vm.descricao.isEmpty {
+                                    page += 1
+                                } else {
+                                    vm.vazio = true
+                                }
+                            } else if page == 1 {
+                                page += 1
+                            } else {
+                                if !vm.titulo.isEmpty {
+                                    vm.vazio = true
+                                } else {
+                                    page += 1
+                                }
+                            }
+                        }
+                    }
+                } label: {
+                    HStack {
+                        if page >= 2 {
+                            Image(systemName: "checkmark")
+                            Text("Finalizar")
+                        } else {
+                            Image(systemName: "play.fill")
+                            Text("Próximo")
+                        }
+                    }
+                    .foregroundStyle(.white)
+                    .padding()
+                    .padding(.horizontal)
+                    .background(Color(.brightBlue))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                .alert(Text("Preencha o campo corretamente..."), isPresented: $vm.vazio) {
+                    Button ("OK") {
+                        
+                    }
+                }
+            }
+            .padding(.top, 30)
+            
+        }
+        .padding()
+        .background(
+            Image("fundoDiario")
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity)
+                .ignoresSafeArea()
+                .opacity(0.4)
+        )
+        .onAppear(perform: {
+            vm.configVM(moc: moc, dismiss: dismiss, fetchedResults: gratidoes)
+        })
+    }
+}
+
+struct Registrar_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            RegistrarGratidaoView()
+        }
+    }
+}
+
+
+
+/*
 struct RegistrarGratidaoView: View {
     @StateObject var vm : RegisterViewModel = RegisterViewModel()
     
@@ -93,10 +198,6 @@ struct RegistrarGratidaoView: View {
                                     },
                                     .cancel(Text("Cancelar"))
                                 ])
-                            }.sheet(isPresented: $vm.camera) {
-                                CameraView(isShown: $vm.camera, dataImage: $vm.imagemData)
-                            }.sheet(isPresented: $vm.imagePicker) {
-                                ImagePicker(isImagePickerPresented: $vm.imagePicker, imagemData: $vm.imagemData)
                             }
                             Spacer()
                         }
@@ -170,16 +271,17 @@ struct RegistrarGratidaoView: View {
     }
 }
 
-struct Registrar_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            RegistrarGratidaoView()
-        }
-    }
-}
+
 
 /*
  .gesture(DragGesture().onChanged {
      UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
  }
  */
+*/
+
+
+
+
+
+

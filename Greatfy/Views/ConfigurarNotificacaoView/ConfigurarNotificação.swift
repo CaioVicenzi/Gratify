@@ -24,6 +24,7 @@ struct ConfigurarNotificacao: View {
                             notificador.pedirPermissao()
                         }
                     }
+                    .tint(.accentColor)
                     
                     VStack{
                         if self.avisar {

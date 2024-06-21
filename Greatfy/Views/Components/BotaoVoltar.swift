@@ -14,7 +14,7 @@ struct BotaoVoltar: View {
         Button(action: {
             dismiss()
         }) {
-            HStack {
+            HStack (spacing: 2){
                 Image(systemName: "chevron.backward")
                 Text("Voltar")
             }

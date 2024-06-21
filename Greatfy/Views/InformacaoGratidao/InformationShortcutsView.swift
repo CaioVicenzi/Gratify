@@ -11,15 +11,24 @@ struct InformationShortcutsView: View {
     var body: some View {
         ScrollView {
             VStack (alignment: .leading, spacing: 10){
-                Text("Use o Gratify fora do Gratify!")
+                Text("Novas formas de usar o Gratify!")
                     .font(.title)
                     .foregroundStyle(Color.accentColor)
                     .bold()
                 Text("As novas formas de usar o Gratify incluem salvar novas gratidões e consultar sua streak fora do aplicativo, para que você não precise abrir o app para fazer essas pequenas tarefas!")
                 
-                tituloSecao("Widget")
+                HStack {
+                    VStack (alignment: .leading){
+                        tituloSecao("Widget")
+                        
+                        Text("O widget do Gratify de permite acompanhar a sua streak e se lembrar de ser grato no dia.")
+                    }
+                    
+                    Rectangle()
+                        .cornerRadius(10)
+                        .frame(width: 100)
+                }
                 
-                Text("O widget do Gratify de permite acompanhar a sua streak e se lembrar de ser grato no dia.")
                 
                 tituloSecao("Siri")
                 

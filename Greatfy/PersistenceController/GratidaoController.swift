@@ -65,9 +65,10 @@ class GratidaoController:ObservableObject {
     
     
     func salvar(context: NSManagedObjectContext) {
+        WidgetCenter.shared.reloadTimelines(ofKind: "StreakWidget")
+
         do {
             try context.save()
-            WidgetCenter.shared.reloadTimelines(ofKind: "StreakWidget")
         } catch {
             print("Deu um erro ao salvar!!!")
         }
@@ -80,7 +81,7 @@ class GratidaoController:ObservableObject {
         gratidao.titulo = titulo
         gratidao.descricao = descricao
         gratidao.dataInclusao = Date()
-        
+
         salvar(context: context)
     }
     
