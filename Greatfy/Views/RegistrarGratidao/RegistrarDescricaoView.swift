@@ -6,7 +6,7 @@ struct RegistrarDescricaoView: View {
     var body: some View {
         VStack  (alignment: .leading){
             // título
-            Text("Pelo que você é grato?")
+            Text("Pelo que você é grato(a)?")
                 .font(.headline)
                 .padding(.bottom, 30)
             
