@@ -156,7 +156,7 @@
 				FD6F83322D0E006600BB3387 /* OnboardingView */,
 				FD8576E32C154F1100EDFB28 /* ConfigurarNotificacaoView */,
 				FDDDCA562B82F5170045B60D /* Components */,
-				FDE5FE1A2B7DD0B400097000 /* AnimacaoStreakAumentando */,
+				FDE5FE1A2B7DD0B400097000 /* StreakAumentando */,
 				FDE8BE8F2AE9AC990041F688 /* InformacaoGratidao */,
 				FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */,
 				FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */,
@@ -287,12 +287,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		FDE5FE1A2B7DD0B400097000 /* AnimacaoStreakAumentando */ = {
+		FDE5FE1A2B7DD0B400097000 /* StreakAumentando */ = {
 			isa = PBXGroup;
 			children = (
 				FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */,
 			);
-			path = AnimacaoStreakAumentando;
+			path = StreakAumentando;
 			sourceTree = "<group>";
 		};
 		FDE5FE242B7EF0F600097000 /* Frameworks */ = {

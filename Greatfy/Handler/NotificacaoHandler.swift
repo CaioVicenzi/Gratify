@@ -1,5 +1,5 @@
 //
-//  NotificacaoHadler.swift
+//  NotificacaoHandler.swift
 //  Gratify
 //
 //  Created by Caio Marques on 25/10/23.

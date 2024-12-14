@@ -210,36 +210,6 @@
             endingLineNumber = "92"
             landmarkName = "didWriteAGratitudeToday(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A2AEE871-3310-4A63-808C-36F8FCB0E220 - 46566365169cb7cb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Gratify.StreakCalculator.didWriteAGratitudeToday(Swift.Array&lt;Gratify.Gratidao&gt;) -&gt; Swift.Bool"
-                  moduleName = "Gratify.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/caiomarques/Documents/GitHub/Gratify/Greatfy/Handler/StreakCalculator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92">
-               </Location>
-               <Location
-                  uuid = "A2AEE871-3310-4A63-808C-36F8FCB0E220 - a81f634384b2f088"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Gratify.Gratidao) -&gt; Swift.Bool in Gratify.StreakCalculator.didWriteAGratitudeToday(Swift.Array&lt;Gratify.Gratidao&gt;) -&gt; Swift.Bool"
-                  moduleName = "Gratify.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/caiomarques/Documents/GitHub/Gratify/Greatfy/Handler/StreakCalculator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

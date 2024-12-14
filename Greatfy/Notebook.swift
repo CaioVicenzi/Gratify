@@ -28,14 +28,13 @@ struct Notebook: View {
     @Binding var text : String
     
     var body: some View {
-        
         ZStack {
             NotebookLines()
                 .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
                 .padding(.horizontal)
             
             TextEditor(text: $text)
-                .padding(24)
+                .padding(8)
                 .background(Color.clear)
         }
     }

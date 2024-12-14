@@ -17,10 +17,8 @@ struct StreakAumentandoView: View {
 
     var body: some View {
         VStack (spacing: 40) {
-            
             Spacer()
             maoAnimada
-            
             
             VStack{
                 if animarTexto {
@@ -33,7 +31,6 @@ struct StreakAumentandoView: View {
             
             Spacer()
             if animarBotao {
-            
                 Button {
                     HapticHandler.instance.impacto(estilo: .medium)
                     mostrarContentView = true
@@ -42,9 +39,9 @@ struct StreakAumentandoView: View {
                         .foregroundStyle(.white)
                         .font(.headline)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 50)
+                        .frame(height: 55)
                         .background(Color(.brightBlue))
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 .padding()
                 .navigationDestination(isPresented: $mostrarContentView) {
@@ -54,7 +51,7 @@ struct StreakAumentandoView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(LinearGradient(colors: [Color(.pinky), Color(.brightBlue)], startPoint: .bottomLeading, endPoint: .topTrailing))
+        .background(LinearGradient(colors: [.accentColor.opacity(0.3), Color.orange], startPoint: .bottomLeading, endPoint: .topTrailing))
         .onAppear(perform: {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 withAnimation (Animation.spring(bounce: 0.8)) {
@@ -82,7 +79,7 @@ struct StreakAumentandoView: View {
             .resizable()
             .scaledToFit()
             .frame(width: animarMao ? UIScreen.main.bounds.width / 3 : UIScreen.main.bounds.width / 5)
-            .foregroundStyle(.purple)
+            .foregroundStyle(Color.white)
     }
     
     func calculateStreak () -> Int {
