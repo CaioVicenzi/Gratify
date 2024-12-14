@@ -7,33 +7,36 @@
 
 import SwiftUI
 
+struct NotebookLines: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let lineSpacing: CGFloat = 24 // Espaçamento entre as linhas
+
+        var y = lineSpacing
+        while y < rect.height {
+            path.move(to: CGPoint(x: rect.minX, y: y))
+            path.addLine(to: CGPoint(x: rect.maxX, y: y))
+            y += lineSpacing
+        }
+
+        return path
+    }
+}
+
+
 struct Notebook: View {
     @Binding var text : String
     
     var body: some View {
-        TextEditor(text: $text)
-            .opacity(0.8)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay {
-                VStack (spacing: 30){
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                    Divider()
-                }
-            }
+        
+        ZStack {
+            NotebookLines()
+                .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
+                .padding(.horizontal)
+            
+            TextEditor(text: $text)
+                .padding(24)
+                .background(Color.clear)
+        }
     }
 }

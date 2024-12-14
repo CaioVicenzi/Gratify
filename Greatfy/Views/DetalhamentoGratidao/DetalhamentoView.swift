@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetalhamentoView: View {
     @StateObject var gratidao:Gratidao
-    @Environment (\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var moc
     @StateObject var vm = DetalhamentoViewModel()
     @FocusState var modoEdicao
     

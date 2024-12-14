@@ -1,10 +1,3 @@
-//
-//  HomeViewModel.swift
-//  Gratify
-//
-//  Created by Caio Marques on 07/06/24.
-//
-
 import Foundation
 import SwiftUI
 import WidgetKit
@@ -23,7 +16,6 @@ extension HomeView {
         
         /// Streak e se já registrou hoje
         @Published var streak : Int = 0
-        //@Published var wroteGratitudeToday : Bool = false
         
         func calculateStreak (_ fetchedResults : FetchedResults<Gratidao>) -> Int {
             let calculator = StreakCalculator()

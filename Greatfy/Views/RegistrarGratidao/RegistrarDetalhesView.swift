@@ -1,10 +1,3 @@
-//
-//  RegistrarDetalhesView.swift
-//  Gratify
-//
-//  Created by Caio Marques on 16/06/24.
-//
-
 import SwiftUI
 
 struct RegistrarDetalhesView: View {
@@ -36,9 +29,7 @@ struct RegistrarDetalhesView: View {
                 HStack {
                     Spacer()
                     Button {
-                        withAnimation {
-                            vm.imagemData = nil
-                        }
+                        vm.excludeImageButtonPressed()
                     } label: {
                         Image(systemName: "xmark.circle")
                     }
@@ -67,36 +58,4 @@ struct RegistrarDetalhesView: View {
             ImagePicker(isImagePickerPresented: $vm.imagePicker, imagemData: $vm.imagemData)
         }
     }
-}
-
-#Preview {
-    @State var action : Bool = false
-    return VStack {
-        RegistrarDetalhesView(vm : RegisterViewModel())
-        HStack {
-            Spacer()
-            Button {
-            } label: {
-                HStack {
-                    Image(systemName: "play.fill")
-                    Text("Próximo")
-                }
-                .foregroundStyle(.white)
-                .padding()
-                .padding(.horizontal)
-                .background(Color(.brightBlue))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-        }
-        .padding(.top, 30)
-    }
-        .padding()
-        .background(
-            Image("fundoDiario")
-                .resizable()
-                .scaledToFill()
-                .frame(height: .infinity)
-                .ignoresSafeArea()
-                .opacity(0.4)
-        )
 }

@@ -13,10 +13,10 @@ struct SaveGratitudeAppIntent: AppIntent {
     
     static var description = IntentDescription("Salve uma gratidão de maneira prática e simples com comandos de voz ou atalho")
     
-    @Parameter (title: "Insira um motivo pelo qual você é grato")
+    @Parameter(title: "Insira um motivo pelo qual você é grato")
     var title : String
     
-    @Parameter (title: "Por que você é grato por isso?")
+    @Parameter(title: "Por que você é grato por isso?")
     var description : String
     
     // Intent para aumentar a barra / alimentar o buddy

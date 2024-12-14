@@ -1,10 +1,3 @@
-//
-//  GratidaoController.swift
-//  Gratify
-//
-//  Created by Caio Marques on 01/06/23.
-//
-
 import Foundation
 import CoreData
 import SwiftUI

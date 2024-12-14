@@ -1,18 +1,10 @@
-//
-//  RegistrarTituloView.swift
-//  Gratify
-//
-//  Created by Caio Marques on 16/06/24.
-//
-
 import SwiftUI
 
 struct RegistrarTituloView: View {
     @StateObject var vm : RegisterViewModel
-    let limitLetters = 30
     
     var body: some View {
-        VStack (alignment: .leading){
+        VStack(alignment: .leading) {
             Spacer()
             
             if vm.mostrarPopup {
@@ -20,10 +12,10 @@ struct RegistrarTituloView: View {
             }
             Text("Dê um título curto para sua gratidão")
                 .font(.headline)
-            Text("Letras: \(vm.titulo.count)/\(limitLetters)")
+            Text("Letras: \(vm.titulo.count)/\(vm.limitLetters)")
                 .font(.callout)
                 .foregroundStyle(.secondary)
-            RoundedRectangle (cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(.background)
                 .opacity(0.8)
                 .overlay {
@@ -31,13 +23,7 @@ struct RegistrarTituloView: View {
                         .foregroundStyle(.primary)
                         .padding()
                         .onChange(of: vm.titulo) { oldValue, newValue in
-                            if newValue.count > limitLetters {
-                                withAnimation {
-                                    vm.mostrarPopup = true
-
-                                }
-                                vm.titulo = oldValue
-                            }
+                            vm.onChangeTitle(oldValue, newValue)
                         }
                 }
                 .frame(height: 50)
@@ -46,33 +32,3 @@ struct RegistrarTituloView: View {
         }
     }
 }
-
-#Preview {
-    return VStack {
-        RegistrarTituloView(vm : RegisterViewModel())
-        HStack {
-            Spacer()
-            Button {
-            } label: {
-                HStack {
-                    Image(systemName: "checkmark")
-                    Text("Finalizar")
-                }
-                .foregroundStyle(.white)
-                .padding()
-                .padding(.horizontal)
-                .background(Color(.brightBlue))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-        }
-        .padding(.top, 30)
-    }
-        .padding()
-        .background(
-            Image("fundoDiario")
-                .resizable()
-                .scaledToFill()
-                .frame(height: .infinity)
-                .ignoresSafeArea()
-                .opacity(0.4)
-        )}

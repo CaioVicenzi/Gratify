@@ -11,7 +11,6 @@
 		FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */; };
 		FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641E2C149CA700DF1B98 /* CameraView.swift */; };
 		FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1064202C149CC100DF1B98 /* ImagePicker.swift */; };
-		FD2A9A642C1881C10002F3C5 /* AlreadyUploadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2A9A632C1881C10002F3C5 /* AlreadyUploadedView.swift */; };
 		FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46DD0C2A13BBD80047C614 /* Dados.swift */; };
 		FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */; };
 		FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */; };
@@ -20,6 +19,7 @@
 		FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
 		FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */; };
 		FD56BCC12C1F7BAD00C0AA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */; };
+		FD6F832F2D0DF9F200BB3387 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */; };
 		FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */; };
 		FD76C5272C18B703008CF8C7 /* StreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76C5262C18B703008CF8C7 /* StreakCalculator.swift */; };
 		FD8576E42C15601000EDFB28 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
@@ -27,7 +27,7 @@
 		FD8576E72C15603200EDFB28 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8576E62C15603200EDFB28 /* DataService.swift */; };
 		FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */; };
 		FDAE47B12A02864D0095FB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */; };
-		FDAE47B82A0286E80095FB09 /* Registrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* Registrar.swift */; };
+		FDAE47B82A0286E80095FB09 /* RegistrarGratidaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */; };
 		FDC3F08B2C1A1A3D00FF519F /* InformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0892C1A1A2400FF519F /* InformationPage.swift */; };
 		FDC3F08E2C1A1BC700FF519F /* InformationShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F08C2C1A1ADA00FF519F /* InformationShortcutsView.swift */; };
 		FDC3F0932C1F5CE400FF519F /* RegistrarDescricaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0922C1F5CE400FF519F /* RegistrarDescricaoView.swift */; };
@@ -84,7 +84,6 @@
 		FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		FD10641E2C149CA700DF1B98 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FD1064202C149CC100DF1B98 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		FD2A9A632C1881C10002F3C5 /* AlreadyUploadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyUploadedView.swift; sourceTree = "<group>"; };
 		FD46DD0C2A13BBD80047C614 /* Dados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
 		FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewModel.swift; sourceTree = "<group>"; };
 		FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewComponents.swift; sourceTree = "<group>"; };
@@ -93,13 +92,14 @@
 		FD4F40402A29217E008F68E8 /* GratidaoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratidaoController.swift; sourceTree = "<group>"; };
 		FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoVoltar.swift; sourceTree = "<group>"; };
 		FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoView.swift; sourceTree = "<group>"; };
 		FD76C5262C18B703008CF8C7 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
 		FD8576E62C15603200EDFB28 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FDAE47A62A02864C0095FB09 /* Gratify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatfyApp.swift; sourceTree = "<group>"; };
 		FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FDAE47B72A0286E80095FB09 /* Registrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrar.swift; sourceTree = "<group>"; };
+		FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarGratidaoView.swift; sourceTree = "<group>"; };
 		FDC3F0892C1A1A2400FF519F /* InformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPage.swift; sourceTree = "<group>"; };
 		FDC3F08C2C1A1ADA00FF519F /* InformationShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationShortcutsView.swift; sourceTree = "<group>"; };
 		FDC3F0922C1F5CE400FF519F /* RegistrarDescricaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarDescricaoView.swift; sourceTree = "<group>"; };
@@ -153,6 +153,7 @@
 		FD4F403B2A292035008F68E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD6F83322D0E006600BB3387 /* OnboardingView */,
 				FD8576E32C154F1100EDFB28 /* ConfigurarNotificacaoView */,
 				FDDDCA562B82F5170045B60D /* Components */,
 				FDE5FE1A2B7DD0B400097000 /* AnimacaoStreakAumentando */,
@@ -160,7 +161,6 @@
 				FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */,
 				FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */,
 				FD4F40442A2A5E0E008F68E8 /* HomeView */,
-				FD2A9A632C1881C10002F3C5 /* AlreadyUploadedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,8 +188,8 @@
 		FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */ = {
 			isa = PBXGroup;
 			children = (
-				FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */,
-				FDAE47B72A0286E80095FB09 /* Registrar.swift */,
+				FD6F83312D0E005500BB3387 /* ViewModel */,
+				FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */,
 				FDC3F0922C1F5CE400FF519F /* RegistrarDescricaoView.swift */,
 				FDC3F0942C1F5CEE00FF519F /* RegistrarDetalhesView.swift */,
 				FDC3F0962C1F5CF900FF519F /* RegistrarTituloView.swift */,
@@ -205,6 +205,22 @@
 				FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */,
 			);
 			path = DetalhamentoGratidao;
+			sourceTree = "<group>";
+		};
+		FD6F83312D0E005500BB3387 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD6F83322D0E006600BB3387 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */,
+			);
+			path = OnboardingView;
 			sourceTree = "<group>";
 		};
 		FD8576E32C154F1100EDFB28 /* ConfigurarNotificacaoView */ = {
@@ -444,7 +460,7 @@
 				FDE8BE942AE9B8010041F688 /* NotificacaoHandler.swift in Sources */,
 				FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */,
 				FDC3F08E2C1A1BC700FF519F /* InformationShortcutsView.swift in Sources */,
-				FDAE47B82A0286E80095FB09 /* Registrar.swift in Sources */,
+				FDAE47B82A0286E80095FB09 /* RegistrarGratidaoView.swift in Sources */,
 				FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */,
 				FDC3F08B2C1A1A3D00FF519F /* InformationPage.swift in Sources */,
 				FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */,
@@ -454,6 +470,7 @@
 				FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */,
 				FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */,
 				FDE5FE1E2B7E59FE00097000 /* HapticHandler.swift in Sources */,
+				FD6F832F2D0DF9F200BB3387 /* OnboardingView.swift in Sources */,
 				FDC3F0992C1F758200FF519F /* Notebook.swift in Sources */,
 				FDF6E0612C133C000017385D /* HomeViewModel.swift in Sources */,
 				FD76C5272C18B703008CF8C7 /* StreakCalculator.swift in Sources */,
@@ -464,7 +481,6 @@
 				FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */,
 				FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */,
 				FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */,
-				FD2A9A642C1881C10002F3C5 /* AlreadyUploadedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

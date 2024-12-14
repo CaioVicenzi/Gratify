@@ -1,10 +1,3 @@
-//
-//  StreakCalculator.swift
-//  Gratify
-//
-//  Created by Caio Marques on 11/06/24.
-//
-
 import Foundation
 import CoreData
 import SwiftUI
@@ -37,14 +30,6 @@ class StreakCalculator {
         
         // segundo: verificar se hoje ou ontem foi grato
         if let ultimaGratidao = copiasGratidao.first?.dataInclusao {
-            /*
-            if Calendar.current.isDateInToday(ultimaGratidao) {
-                wroteGratitudeToday = true
-            } else {
-                wroteGratitudeToday = false
-            }
-             */
-            
             if Calendar.current.isDateInToday(ultimaGratidao) || Calendar.current.isDateInYesterday(ultimaGratidao) {
                 streak += 1
                 
@@ -78,10 +63,11 @@ class StreakCalculator {
     }
     
     func didGratifyToday () -> Bool {
-        let ultimaGratidao = fetchedResults?.first?.dataInclusao
+        /*
+        let lastGratitude = fetchedResults?.first?.dataInclusao
         
-        if let ultimaGratidao {
-            if Calendar.current.isDateInToday(ultimaGratidao) {
+        if let lastGratitude {
+            if Calendar.current.isDateInToday(lastGratitude) {
                 return true
             } else {
                 return false
@@ -89,5 +75,27 @@ class StreakCalculator {
         } else {
             return false
         }
+         */
+        
+        let didWrote = fetchedResults?.contains { gratitude in
+            if let dataInclusao = gratitude.dataInclusao {
+                return Calendar.current.isDateInToday(dataInclusao)
+            }
+            return false
+        }
+        
+        return didWrote == true
+    }
+    
+    
+    func didWriteAGratitudeToday (_ gratitudes : [Gratidao]) -> Bool {
+        let didWrote = gratitudes.contains { gratitude in
+            if let dataInclusao = gratitude.dataInclusao {
+                return Calendar.current.isDateInToday(dataInclusao)
+            }
+            return false
+        }
+        
+        return didWrote
     }
 }

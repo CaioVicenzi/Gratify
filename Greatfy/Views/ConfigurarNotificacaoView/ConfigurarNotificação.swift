@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-//
+
 struct ConfigurarNotificacao: View {
-    @Environment (\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss
     @State var avisar : Bool = false
     @State var data : Date = Date()
     let notificador = NotificacaoHandler()

@@ -10,8 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var vm = HomeViewModel()
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
-    @Environment (\.colorScheme) var colorScheme
-    @Environment (\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.managedObjectContext) var moc
     
     var body: some View {
         ZStack {

@@ -1,10 +1,3 @@
-//
-//  RegistrarDescricaoView.swift
-//  Gratify
-//
-//  Created by Caio Marques on 16/06/24.
-//
-
 import SwiftUI
 
 struct RegistrarDescricaoView: View {
@@ -20,31 +13,6 @@ struct RegistrarDescricaoView: View {
             
             Notebook(text: $vm.descricao)
                 .opacity(0.6)
-
-            /*
-            TextEditor(text: $vm.descricao)
-                .clipShape(RoundedRectangle(cornerRadius: 25))
-                .overlay (alignment: .top){
-                    VStack (spacing: 25){
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                        Divider()
-                    }
-                }
-            */
-            
         }
     }
 }

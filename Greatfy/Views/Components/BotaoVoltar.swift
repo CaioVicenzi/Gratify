@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BotaoVoltar: View {
-    @Environment (\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         Button(action: {

@@ -12,7 +12,7 @@ struct StreakAumentandoView: View {
     @State var animarTexto = false
     @State var animarBotao = false
     @State var mostrarContentView = false
-    @Environment (\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
 
     var body: some View {

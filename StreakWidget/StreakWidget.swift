@@ -74,7 +74,7 @@ struct StreakWidgetEntryView : View {
 
 struct StreakWidget: Widget {
     let kind: String = "StreakWidget"
-    @Environment (\.widgetFamily) var family
+    @Environment(\.widgetFamily) var family
 
     var body: some WidgetConfiguration {
         

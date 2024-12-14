@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListItem: View {
     var gratidao : Gratidao
-    @Environment (\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var moc
     @Binding var sharedItem:Gratidao?
     
     var body: some View {
