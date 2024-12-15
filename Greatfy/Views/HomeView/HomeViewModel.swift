@@ -26,7 +26,7 @@ extension HomeView {
         func wroteGratitudeToday(_ fetchedResults : FetchedResults<Gratidao>) -> Bool {
             let calculator = StreakCalculator()
             calculator.configCalculator(fetchedResults: fetchedResults)
-            return calculator.didGratifyToday()
+            return calculator.didWriteGratitudeToday()
         }
         
         func dismissKeyboard () {

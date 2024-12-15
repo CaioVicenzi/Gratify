@@ -16,7 +16,9 @@ struct InformationPage: View {
             InformationShortcutsView()
                 .tag(2)
         }
+        .tabViewStyle(.page(indexDisplayMode: .always))
         .tabViewStyle(.page)
+        
     }
 }
 

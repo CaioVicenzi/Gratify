@@ -22,7 +22,7 @@ struct SaveGratitudeAppIntent: AppIntent {
     // Intent para aumentar a barra / alimentar o buddy
     func perform() async throws -> some ProvidesDialog & ShowsSnippetView {
         
-        GratidaoController().adicionarGratidaoDiario(titulo: title, descricao: description, data: Date(), context: GratidaoController.compartilhado.container.viewContext)
+        GratitudeController().addGratitude(title: title, description: description, date: Date(), context: GratitudeController.shared.container.viewContext)
         
         return .result(dialog: "Gratidão salva!")
     }

@@ -11,7 +11,7 @@ class DataService : ObservableObject {
     @Published var streak : Int = 0
     @Published var wroteGratitudeToday : Bool = false
     
-    var controller = GratidaoController.compartilhado.container.viewContext
+    var controller = GratitudeController.shared.container.viewContext
     
     init() {
         let request = Gratidao.fetchRequest()

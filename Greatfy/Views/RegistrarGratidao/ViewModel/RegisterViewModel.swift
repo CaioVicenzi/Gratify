@@ -40,7 +40,7 @@ class RegisterViewModel : ObservableObject {
         }
         
         if (!(titulo.isEmpty) && !(descricao.isEmpty)) {
-            HapticHandler.instance.notificacao(tipo: .success)
+            HapticHandler.instance.notification(feedbackType: .success)
             
             let calculator = StreakCalculator()
             guard let gratitudes = try? moc.fetch(Gratidao.fetchRequest()) else {
@@ -48,9 +48,9 @@ class RegisterViewModel : ObservableObject {
                 return
             }
             
-            GratidaoController().adicionarGratidaoPorImagem(titulo: titulo, descricao: descricao, imageData: imagemData, data: data, context: moc)
+            GratitudeController().addGratitude(title: titulo, description: descricao, imageData: imagemData, date: data, context: moc)
             
-            let didSaveGratitudeToday = calculator.didWriteAGratitudeToday(gratitudes)
+            let didSaveGratitudeToday = calculator.didWriteGratitudeToday(gratitudes)
             if didSaveGratitudeToday {
                 if let dismiss {
                     dismiss()
@@ -59,7 +59,7 @@ class RegisterViewModel : ObservableObject {
                 mostrarStreakAumentando = true
             }
         } else {
-            HapticHandler.instance.notificacao(tipo: .error)
+            HapticHandler.instance.notification(feedbackType: .error)
             vazio = true
         }
     }
@@ -82,8 +82,8 @@ class RegisterViewModel : ObservableObject {
     }
     
     func titleValueChanged(newValue : String) {
-        if newValue.count > limiteTitulo {
-            titulo = String(describing: newValue.prefix(limiteTitulo))
+        if newValue.count > limitLetters {
+            titulo = String(describing: newValue.prefix(limitLetters))
             withAnimation {
                 mostrarPopup = true
             }
@@ -96,7 +96,7 @@ class RegisterViewModel : ObservableObject {
         let gratidoes = fetchRequest.wrappedValue
         
         streakCalculator.configCalculator(fetchedResults: gratidoes)
-        return streakCalculator.didGratifyToday()
+        return streakCalculator.didWriteGratitudeToday()
     }
     
     func nextButtonPressed() {

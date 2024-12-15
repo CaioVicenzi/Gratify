@@ -8,7 +8,7 @@ struct RegistrarTituloView: View {
             Spacer()
             
             if vm.mostrarPopup {
-                PopupErro(mostrarPopup: $vm.mostrarPopup)
+                PopupErro(showPopup: $vm.mostrarPopup)
             }
             Text("Dê um título curto para sua gratidão")
                 .font(.headline)

@@ -78,13 +78,6 @@ struct InformacaoGratidao: View {
             }
         }
         .navigationTitle("Sobre a gratidão")
-        .toolbar(content: {
-            ToolbarItem(placement: .topBarLeading) {
-                BotaoVoltar()
-            }
-        }).navigationBarBackButtonHidden()
-        
-
     }
 }
 

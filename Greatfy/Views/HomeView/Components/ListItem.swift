@@ -39,8 +39,8 @@ struct ListItem: View {
             
             // EXCLUIR
             Button (role: .destructive){
-                HapticHandler.instance.notificacao(tipo: .warning)
-                GratidaoController().excluirGratidao(gratidao: gratidao, context: moc)
+                HapticHandler.instance.notification(feedbackType: .warning)
+                GratitudeController().deleteGratitude(gratitude: gratidao, context: moc)
             } label: {
                 Image(systemName: "trash")
             }
@@ -57,8 +57,8 @@ struct ListItem: View {
         .swipeActions(edge: .leading) {
             // FAVORITAR
             Button {
-                HapticHandler.instance.impacto(estilo: .light)
-                GratidaoController().mudarFavoritado(gratidao: gratidao, context: moc)
+                HapticHandler.instance.impact(feedbackStyle: .light)
+                GratitudeController().toggleFavorited(gratitude: gratidao, context: moc)
                 
             } label: {
                 

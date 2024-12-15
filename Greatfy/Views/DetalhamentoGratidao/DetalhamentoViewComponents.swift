@@ -138,8 +138,8 @@ extension DetalhamentoView {
     
     var favButton : some View {
         Button {
-            HapticHandler.instance.impacto(estilo: .light)
-            GratidaoController().mudarFavoritado(gratidao: gratidao, context: moc)
+            HapticHandler.instance.impact(feedbackStyle: .light)
+            GratitudeController().toggleFavorited(gratitude: gratidao, context: moc)
         } label: {
             Image(systemName: gratidao.favoritado ? "heart.fill" : "heart")
         }

@@ -1,10 +1,3 @@
-//
-//  s.swift
-//  Gratify
-//
-//  Created by Caio Marques on 16/06/24.
-//
-
 import SwiftUI
 
 struct NotebookLines: Shape {

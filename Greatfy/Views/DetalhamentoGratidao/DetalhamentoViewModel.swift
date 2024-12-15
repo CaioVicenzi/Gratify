@@ -30,6 +30,8 @@ extension DetalhamentoView {
         // 3) variáveis de fora
         @Published var gratidao:Gratidao?
         @Published var moc : NSManagedObjectContext? = nil
+        
+        let limitLetters = 30
                 
         init() {}
         
@@ -59,8 +61,8 @@ extension DetalhamentoView {
         }
         
         func changeTitle () {
-            if tituloTemporario.count > limiteTitulo {
-                tituloTemporario = String(tituloTemporario.prefix(limiteTitulo))
+            if tituloTemporario.count > limitLetters {
+                tituloTemporario = String(tituloTemporario.prefix(limitLetters))
                 
                 withAnimation {
                     mostrarPopupTituloLongo = true
@@ -79,8 +81,8 @@ extension DetalhamentoView {
             } else {
                 tituloTemporario = tituloTemporario
                 descricaoTemporaria = descricaoTemporaria
-                GratidaoController().editarGratidao(gratidao: gratidao, titulo: tituloTemporario, descricao: descricaoTemporaria, data: dataTemporaria, imagem: imagemTemporaria, context: moc)
-                HapticHandler.instance.notificacao(tipo: .success)
+                GratitudeController().editGratitude(gratitude: gratidao, title: tituloTemporario, description: descricaoTemporaria, date: dataTemporaria, imageData: imagemTemporaria, context: moc)
+                HapticHandler.instance.notification(feedbackType: .success)
             }
         }
         

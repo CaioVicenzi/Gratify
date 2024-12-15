@@ -167,38 +167,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "33466324-CB08-46A7-A7CC-8977A000E384"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Greatfy/Handler/StreakCalculator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "didGratifyToday()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A4ECD589-8D48-48DA-B97F-BE9F239E323F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Greatfy/Handler/StreakCalculator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "didGratifyToday()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A2AEE871-3310-4A63-808C-36F8FCB0E220"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -206,9 +174,9 @@
             filePath = "Greatfy/Handler/StreakCalculator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "didWriteAGratitudeToday(_:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "didGratifyToday()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -222,9 +190,9 @@
             filePath = "Greatfy/Handler/StreakCalculator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "didWriteAGratitudeToday(_:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "didGratifyToday()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -238,9 +206,9 @@
             filePath = "Greatfy/Handler/StreakCalculator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "didWriteAGratitudeToday(_:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "didGratifyToday()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -254,9 +222,9 @@
             filePath = "Greatfy/Handler/StreakCalculator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "didWriteAGratitudeToday(_:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "didGratifyToday()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

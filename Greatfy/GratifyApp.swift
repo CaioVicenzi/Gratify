@@ -1,10 +1,10 @@
-//03/05/23
+//Projeto iniciado no dia 03/05/23
 
 import SwiftUI
 
 @main
-struct GreatfyApp: App {
-    @StateObject private var gratidaoController = GratidaoController()
+struct GratifyApp: App {
+    @StateObject private var gratidaoController = GratitudeController()
     @AppStorage("alreadyUploaded") var alreadyUploaded = false
     @AppStorage("alreadyEnteredTheApp") var alreadyEnteredTheApp = false
     

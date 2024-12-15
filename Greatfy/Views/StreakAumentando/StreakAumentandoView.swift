@@ -32,7 +32,7 @@ struct StreakAumentandoView: View {
             Spacer()
             if animarBotao {
                 Button {
-                    HapticHandler.instance.impacto(estilo: .medium)
+                    HapticHandler.instance.impact(feedbackStyle: .medium)
                     mostrarContentView = true
                 } label: {
                     Text("Vamos nessa!")

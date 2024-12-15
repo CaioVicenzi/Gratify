@@ -11,22 +11,20 @@
 		FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */; };
 		FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641E2C149CA700DF1B98 /* CameraView.swift */; };
 		FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1064202C149CC100DF1B98 /* ImagePicker.swift */; };
-		FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46DD0C2A13BBD80047C614 /* Dados.swift */; };
 		FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */; };
 		FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */; };
 		FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */; };
 		FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
-		FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
-		FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */; };
+		FD4F40412A29217E008F68E8 /* GratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratitudeController.swift */; };
 		FD56BCC12C1F7BAD00C0AA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */; };
 		FD6F832F2D0DF9F200BB3387 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */; };
 		FD6F83342D0E798600BB3387 /* ConfigureNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F83332D0E798600BB3387 /* ConfigureNotificationViewModel.swift */; };
 		FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */; };
 		FD76C5272C18B703008CF8C7 /* StreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76C5262C18B703008CF8C7 /* StreakCalculator.swift */; };
 		FD8576E42C15601000EDFB28 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
-		FD8576E52C15601300EDFB28 /* GratidaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratidaoController.swift */; };
+		FD8576E52C15601300EDFB28 /* GratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratitudeController.swift */; };
 		FD8576E72C15603200EDFB28 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8576E62C15603200EDFB28 /* DataService.swift */; };
-		FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */; };
+		FDAE47AA2A02864C0095FB09 /* GratifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47A92A02864C0095FB09 /* GratifyApp.swift */; };
 		FDAE47B12A02864D0095FB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */; };
 		FDAE47B82A0286E80095FB09 /* RegistrarGratidaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */; };
 		FDC3F08B2C1A1A3D00FF519F /* InformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0892C1A1A2400FF519F /* InformationPage.swift */; };
@@ -85,13 +83,11 @@
 		FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		FD10641E2C149CA700DF1B98 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FD1064202C149CC100DF1B98 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		FD46DD0C2A13BBD80047C614 /* Dados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
 		FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewModel.swift; sourceTree = "<group>"; };
 		FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewComponents.swift; sourceTree = "<group>"; };
 		FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GratidaoModel.xcdatamodel; sourceTree = "<group>"; };
-		FD4F40402A29217E008F68E8 /* GratidaoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratidaoController.swift; sourceTree = "<group>"; };
-		FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoVoltar.swift; sourceTree = "<group>"; };
+		FD4F40402A29217E008F68E8 /* GratitudeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeController.swift; sourceTree = "<group>"; };
 		FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FD6F83332D0E798600BB3387 /* ConfigureNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNotificationViewModel.swift; sourceTree = "<group>"; };
@@ -99,7 +95,7 @@
 		FD76C5262C18B703008CF8C7 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
 		FD8576E62C15603200EDFB28 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FDAE47A62A02864C0095FB09 /* Gratify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratify.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatfyApp.swift; sourceTree = "<group>"; };
+		FDAE47A92A02864C0095FB09 /* GratifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratifyApp.swift; sourceTree = "<group>"; };
 		FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarGratidaoView.swift; sourceTree = "<group>"; };
 		FDC3F0892C1A1A2400FF519F /* InformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPage.swift; sourceTree = "<group>"; };
@@ -171,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */,
-				FD4F40402A29217E008F68E8 /* GratidaoController.swift */,
+				FD4F40402A29217E008F68E8 /* GratitudeController.swift */,
 			);
 			path = PersistenceController;
 			sourceTree = "<group>";
@@ -260,8 +256,7 @@
 			children = (
 				FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */,
 				FDE8BE922AE9B7F30041F688 /* Handler */,
-				FDAE47A92A02864C0095FB09 /* GreatfyApp.swift */,
-				FD46DD0C2A13BBD80047C614 /* Dados.swift */,
+				FDAE47A92A02864C0095FB09 /* GratifyApp.swift */,
 				FD4F403C2A29206D008F68E8 /* PersistenceController */,
 				FD4F403B2A292035008F68E8 /* Views */,
 				FDAE47AF2A02864D0095FB09 /* Preview Content */,
@@ -281,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				FDC3F0982C1F758200FF519F /* Notebook.swift */,
-				FD4F404D2A2C0E47008F68E8 /* BotaoVoltar.swift */,
 				FDDDCA572B82F5290045B60D /* PopupErro.swift */,
 				FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */,
 				FD10641E2C149CA700DF1B98 /* CameraView.swift */,
@@ -454,7 +448,6 @@
 			files = (
 				FDC3F0972C1F5CF900FF519F /* RegistrarTituloView.swift in Sources */,
 				FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */,
-				FD46DD0D2A13BBD80047C614 /* Dados.swift in Sources */,
 				FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */,
 				FDE8BE962AEA111E0041F688 /* ConfigureNotificationView.swift in Sources */,
 				FDF6E0652C1373250017385D /* HomeViewUIComponents.swift in Sources */,
@@ -469,7 +462,7 @@
 				FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */,
 				FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */,
 				FDE8BE912AE9ACB00041F688 /* InformacaoGratidao.swift in Sources */,
-				FDAE47AA2A02864C0095FB09 /* GreatfyApp.swift in Sources */,
+				FDAE47AA2A02864C0095FB09 /* GratifyApp.swift in Sources */,
 				FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */,
 				FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */,
 				FDE5FE1E2B7E59FE00097000 /* HapticHandler.swift in Sources */,
@@ -479,11 +472,10 @@
 				FD76C5272C18B703008CF8C7 /* StreakCalculator.swift in Sources */,
 				FDC3F0952C1F5CEE00FF519F /* RegistrarDetalhesView.swift in Sources */,
 				FDDDCA582B82F5290045B60D /* PopupErro.swift in Sources */,
-				FD4F40412A29217E008F68E8 /* GratidaoController.swift in Sources */,
+				FD4F40412A29217E008F68E8 /* GratitudeController.swift in Sources */,
 				FDC3F0932C1F5CE400FF519F /* RegistrarDescricaoView.swift in Sources */,
 				FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */,
 				FD6F83342D0E798600BB3387 /* ConfigureNotificationViewModel.swift in Sources */,
-				FD4F404E2A2C0E47008F68E8 /* BotaoVoltar.swift in Sources */,
 				FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +489,7 @@
 				FDE5FE2D2B7EF0F600097000 /* StreakWidget.swift in Sources */,
 				FD8576E42C15601000EDFB28 /* GratidaoModel.xcdatamodeld in Sources */,
 				FD8576E72C15603200EDFB28 /* DataService.swift in Sources */,
-				FD8576E52C15601300EDFB28 /* GratidaoController.swift in Sources */,
+				FD8576E52C15601300EDFB28 /* GratitudeController.swift in Sources */,
 				FDC9DF7F2C19CA92001C7BB6 /* SaveGratitudeAppIntent.swift in Sources */,
 				FDE5FE3A2B7EF3BF00097000 /* Color.swift in Sources */,
 			);
@@ -649,7 +641,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,9 +649,13 @@
 				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -684,7 +679,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,9 +687,13 @@
 				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = caio.Greatfy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

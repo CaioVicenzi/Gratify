@@ -22,7 +22,7 @@ struct DetalhamentoView: View {
             VStack{
                 //MARK:  titulo
                 if vm.mostrarPopupTituloLongo {
-                    PopupErro(mostrarPopup: $vm.mostrarPopupTituloLongo)
+                    PopupErro(showPopup: $vm.mostrarPopupTituloLongo)
                 }
                     
                 titulo
@@ -46,8 +46,7 @@ struct DetalhamentoView: View {
             .onAppear{
                 vm.setupTemps(moc: moc, gratidao: gratidao)
             }
-            .navigationBarBackButtonHidden()
-            .navigationBarItems(leading: BotaoVoltar()).toolbar{
+            .toolbar{
                 if vm.somethingChanged() {
                     ToolbarItem (placement: .automatic){
                         botaoFeito

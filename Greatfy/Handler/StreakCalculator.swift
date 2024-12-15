@@ -62,21 +62,7 @@ class StreakCalculator {
         return streak
     }
     
-    func didGratifyToday () -> Bool {
-        /*
-        let lastGratitude = fetchedResults?.first?.dataInclusao
-        
-        if let lastGratitude {
-            if Calendar.current.isDateInToday(lastGratitude) {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
-         */
-        
+    func didWriteGratitudeToday () -> Bool {
         let didWrote = fetchedResults?.contains { gratitude in
             if let dataInclusao = gratitude.dataInclusao {
                 return Calendar.current.isDateInToday(dataInclusao)
@@ -88,7 +74,7 @@ class StreakCalculator {
     }
     
     
-    func didWriteAGratitudeToday (_ gratitudes : [Gratidao]) -> Bool {
+    func didWriteGratitudeToday (_ gratitudes : [Gratidao]) -> Bool {
         let didWrote = gratitudes.contains { gratitude in
             if let dataInclusao = gratitude.dataInclusao {
                 return Calendar.current.isDateInToday(dataInclusao)

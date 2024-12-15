@@ -28,8 +28,8 @@ extension HomeView {
         } label: {
             Image(systemName: "info.circle")
         }
-        .sheet(isPresented: $vm.showInfoSheet, content: {
-            InformacaoGratidao()
+        .navigationDestination(isPresented: $vm.showInfoSheet, destination: {
+            InformationPage()
         })
     }
     
@@ -90,7 +90,7 @@ extension HomeView {
         .background(vm.wroteGratitudeToday(gratidoes) ? Color(.brightBlue) : .gray)
         .clipShape(RoundedRectangle(cornerRadius: 50))
         .onTapGesture {
-            HapticHandler.instance.impacto(estilo: .light)
+            HapticHandler.instance.impact(feedbackStyle: .light)
             withAnimation (.spring){
                 vm.showMaximizedStreak.toggle()
             }
