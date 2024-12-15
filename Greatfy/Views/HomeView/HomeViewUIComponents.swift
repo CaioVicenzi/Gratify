@@ -17,7 +17,7 @@ extension HomeView {
             Image(systemName: "bell")
         }
         .sheet(isPresented: $vm.showReminderSheet, content: {
-            ConfigurarNotificacao()
+            ConfigureNotification()
                 .presentationDetents([.medium])
         })
     }

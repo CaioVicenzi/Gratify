@@ -1,24 +1,16 @@
-//
-//  HapticHandler.swift
-//  Gratify
-//
-//  Created by Caio Marques on 15/02/24.
-//
-
 import Foundation
 import UIKit
 
 class HapticHandler {
     static let instance = HapticHandler()
     
-    func notificacao (tipo : UINotificationFeedbackGenerator.FeedbackType) {
-        let gerador = UINotificationFeedbackGenerator()
-        gerador.notificationOccurred(tipo)
-        
+    func notification(feedbackType : UINotificationFeedbackGenerator.FeedbackType) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(feedbackType)
     }
     
-    func impacto (estilo : UIImpactFeedbackGenerator.FeedbackStyle) {
-        let gerador = UIImpactFeedbackGenerator(style: estilo)
-        gerador.impactOccurred()
+    func impact(feedbackStyle : UIImpactFeedbackGenerator.FeedbackStyle) {
+        let generator = UIImpactFeedbackGenerator(style: feedbackStyle)
+        generator.impactOccurred()
     }
 }
