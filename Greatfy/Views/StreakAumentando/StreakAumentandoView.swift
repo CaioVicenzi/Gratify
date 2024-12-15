@@ -51,7 +51,7 @@ struct StreakAumentandoView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(LinearGradient(colors: [.accentColor.opacity(0.3), Color.orange], startPoint: .bottomLeading, endPoint: .topTrailing))
+        .background(RadialGradient(gradient: Gradient(colors: [Color.accentColor.opacity(0.1), Color.orange]), center: .center, startRadius: 500, endRadius: 250))
         .onAppear(perform: {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 withAnimation (Animation.spring(bounce: 0.8)) {
