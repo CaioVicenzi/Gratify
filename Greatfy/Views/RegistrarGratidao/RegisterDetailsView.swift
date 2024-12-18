@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RegistrarDetalhesView: View {
+struct RegisterDetailsView: View {
     @StateObject var vm : RegisterViewModel
     
     var body: some View {
@@ -13,7 +13,7 @@ struct RegistrarDetalhesView: View {
                 .font(.headline)
             
             Button {
-                vm.actionSheetAparecendo.toggle()
+                vm.showActionSheet.toggle()
             } label: {
                 HStack {
                     Image(systemName: "camera")
@@ -41,21 +41,21 @@ struct RegistrarDetalhesView: View {
             }
             Spacer()
         }
-        .actionSheet(isPresented: $vm.actionSheetAparecendo) {
+        .actionSheet(isPresented: $vm.showActionSheet) {
             ActionSheet(title: Text("Selecione uma imagem"), message: Text("Como você quer selecionar ela?"), buttons: [
                 .default(Text("Galeria").foregroundColor(.purple)){
-                    vm.imagePicker = true
+                    vm.showImagePicker = true
                 },
                 .default(Text("Câmera")){
-                    vm.camera = true
+                    vm.showCamera = true
                 },
                 .cancel(Text("Cancelar"))
             ])
         }
-        .sheet(isPresented: $vm.camera) {
-            CameraView(isShown: $vm.camera, dataImage: $vm.imagemData)
-        }.sheet(isPresented: $vm.imagePicker) {
-            ImagePicker(isImagePickerPresented: $vm.imagePicker, imagemData: $vm.imagemData)
+        .sheet(isPresented: $vm.showCamera) {
+            CameraView(isShown: $vm.showCamera, dataImage: $vm.imagemData)
+        }.sheet(isPresented: $vm.showImagePicker) {
+            ImagePicker(isImagePickerPresented: $vm.showImagePicker, imagemData: $vm.imagemData)
         }
     }
 }

@@ -59,7 +59,7 @@ class NotificationHandler {
         notificationCenter.getPendingNotificationRequests { notifications in
             for notification in notifications {
                 if notification.identifier == "notification" {
-                    if let notificacao = notification.trigger as? UNCalendarNotificationTrigger{
+                    if let notificacao = notification.trigger as? UNCalendarNotificationTrigger {
                         let date = Calendar.current.date(from: notificacao.dateComponents) ?? Date()
                         completion(date)
                     }
@@ -67,5 +67,4 @@ class NotificationHandler {
             }
         }
     }
-    
 }

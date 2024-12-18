@@ -7,28 +7,23 @@ class RegisterViewModel : ObservableObject {
     @Published var titulo:String = ""
     @Published var descricao:String = ""
     @Published var page : Int = 0
-    
-    @Published var tituloParaImagem:String = ""
-    @Published var descricaoParaImagem:String = ""
-    
     @Published var data:Date = Date()
     @Published var imagemData:Data? = nil
-    @Published var salvarComData : Bool = false
-    @Published var vazio : Bool = false
-    @Published var mostrarStreakAumentando : Bool = false
     
-    @Published var escolherData : Bool = false
-    @Published var actionSheetAparecendo : Bool = false
-    @Published var imagePicker = false
-    @Published var camera = false
-    @Published var mostrarPopup : Bool = false
+    @Published var goGrowStreak : Bool = false
+    
+    @Published var showEmptyFieldError : Bool = false
+    @Published var showActionSheet : Bool = false
+    @Published var showImagePicker = false
+    @Published var showCamera = false
+    @Published var showLongTitleError : Bool = false
     
     var moc : NSManagedObjectContext? = nil
     var dismiss : DismissAction?
     
     let limitLetters = 30
     
-    func configVM(moc : NSManagedObjectContext, dismiss: DismissAction, fetchedResults : FetchedResults<Gratidao>) {
+    func configVM(moc : NSManagedObjectContext, dismiss: DismissAction) {
         self.moc = moc
         self.dismiss = dismiss
     }
@@ -56,37 +51,11 @@ class RegisterViewModel : ObservableObject {
                     dismiss()
                 }
             } else {
-                mostrarStreakAumentando = true
+                goGrowStreak = true
             }
         } else {
             HapticHandler.instance.notification(feedbackType: .error)
-            vazio = true
-        }
-    }
-    
-    func returnAlert() -> Alert {
-        var faltou = "Faltou "
-        
-        if titulo.isEmpty {
-            faltou += "titulo "
-            if descricao.isEmpty {
-                faltou += "e "
-            }
-        }
-        
-        if descricao.isEmpty {
-            faltou += "descricao"
-        }
-        
-        return Alert(title: Text(faltou))
-    }
-    
-    func titleValueChanged(newValue : String) {
-        if newValue.count > limitLetters {
-            titulo = String(describing: newValue.prefix(limitLetters))
-            withAnimation {
-                mostrarPopup = true
-            }
+            showEmptyFieldError = true
         }
     }
     
@@ -108,13 +77,13 @@ class RegisterViewModel : ObservableObject {
                     if !descricao.isEmpty {
                         page += 1
                     } else {
-                        vazio = true
+                        showEmptyFieldError = true
                     }
                 } else if page == 1 {
                     page += 1
                 } else {
                     if !titulo.isEmpty {
-                        vazio = true
+                        showEmptyFieldError = true
                     } else {
                         page += 1
                     }
@@ -140,7 +109,7 @@ class RegisterViewModel : ObservableObject {
     func onChangeTitle(_ oldValue : String, _ newValue : String) {
         if newValue.count > limitLetters {
             withAnimation {
-                mostrarPopup = true
+                showLongTitleError = true
             }
             titulo = oldValue
         }
@@ -149,11 +118,11 @@ class RegisterViewModel : ObservableObject {
     @ViewBuilder
     func fieldsToShow(_ page : Int) -> some View {
         if page == 0 {
-            RegistrarDescricaoView(vm: self)
+            RegisterDescriptionView(vm: self)
         } else if page == 1 {
-            RegistrarDetalhesView(vm: self)
+            RegisterDetailsView(vm: self)
         } else {
-            RegistrarTituloView(vm: self)
+            RegisterTitleView(vm: self)
         }
     }
 }

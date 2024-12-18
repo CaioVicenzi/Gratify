@@ -18,18 +18,36 @@ class StreakCalculator {
         if fetchedResults.count == 0 {
             return 0
         }
-        
-        var streak = 0
-        
+                
         // primeiro: ordene a lista da gratidão mais recente para a mais posterior
         let copiasGratidao = Array(fetchedResults)
+        return calculateStreak(copiasGratidao)
+    }
+    
+    func calculateStreak(_ gratitudes : [Gratidao]) -> Int {
+        if gratitudes.count == 0 {
+            return 0
+        }
+        
+        let gratitudeCopies = gratitudes.sorted { g1, g2 in
+            guard let inclusionDate1 = g1.dataInclusao, let inclusionDate2 = g2.dataInclusao else {
+                return g1.data?.timeIntervalSince1970 ?? 2 > g2.data?.timeIntervalSince1970 ?? 1
+            }
+            return inclusionDate1.timeIntervalSince1970 > inclusionDate2.timeIntervalSince1970
+        }
+        
+        return calculateStreak(from: gratitudeCopies)
+    }
+    
+    private func calculateStreak(from gratitudes : [Gratidao]) -> Int {
+        var streak = 0
         
         // dia anterior e dia anterior de antes (o dia anterior da última rodada
         var diaAnterior = Calendar.current.date(byAdding: DateComponents(day: -1), to: Date())
         var diaAnteriorDeAntes : Date? = Date()
         
         // segundo: verificar se hoje ou ontem foi grato
-        if let ultimaGratidao = copiasGratidao.first?.dataInclusao {
+        if let ultimaGratidao = gratitudes.first?.dataInclusao {
             if Calendar.current.isDateInToday(ultimaGratidao) || Calendar.current.isDateInYesterday(ultimaGratidao) {
                 streak += 1
                 
@@ -40,8 +58,8 @@ class StreakCalculator {
                     diaAnteriorDeAntes = Calendar.current.date(byAdding: DateComponents(day: -1), to: Date())
                 }
                 // terceiro: fazer um loop que verifica se a data da gratidão é o mesmo dia de ontem, se for, aumenta a streak em um e diminui um dia no diaAnterior e no diaAnteriorDeAntes
-                for i in 1 ..< copiasGratidao.count {
-                    if let data = copiasGratidao[i].dataInclusao {
+                for i in 1 ..< gratitudes.count {
+                    if let data = gratitudes[i].dataInclusao {
                         if Calendar.current.isDate(diaAnterior ?? Date(), inSameDayAs: data) {
                             streak += 1
                             
@@ -61,6 +79,7 @@ class StreakCalculator {
         
         return streak
     }
+
     
     func didWriteGratitudeToday () -> Bool {
         let didWrote = fetchedResults?.contains { gratitude in
@@ -76,8 +95,8 @@ class StreakCalculator {
     
     func didWriteGratitudeToday (_ gratitudes : [Gratidao]) -> Bool {
         let didWrote = gratitudes.contains { gratitude in
-            if let dataInclusao = gratitude.dataInclusao {
-                return Calendar.current.isDateInToday(dataInclusao)
+            if let inclusionDate = gratitude.dataInclusao {
+                return Calendar.current.isDateInToday(inclusionDate)
             }
             return false
         }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListItem: View {
-    var gratidao : Gratidao
+    var gratitude : Gratidao
     @Environment(\.managedObjectContext) var moc
     @Binding var sharedItem:Gratidao?
     
@@ -20,8 +20,8 @@ struct ListItem: View {
                 date
             }.padding(.bottom, 2)
             HStack{
-                if let descricaoCerteza = gratidao.descricao {
-                    Text(descricaoCerteza)
+                if let description = gratitude.descricao {
+                    Text(description)
                         .lineLimit(1)
                         .font(.footnote)
                         .foregroundStyle(.secondary)
@@ -29,7 +29,7 @@ struct ListItem: View {
                 
                 Spacer()
                 
-                if gratidao.favoritado{
+                if gratitude.favoritado{
                     Image(systemName: "heart.fill")
                         .foregroundColor(Color(.brightBlue))
                 }
@@ -40,13 +40,13 @@ struct ListItem: View {
             // EXCLUIR
             Button (role: .destructive){
                 HapticHandler.instance.notification(feedbackType: .warning)
-                GratitudeController().deleteGratitude(gratitude: gratidao, context: moc)
+                GratitudeController().deleteGratitude(gratitude: gratitude, context: moc)
             } label: {
                 Image(systemName: "trash")
             }
             // COMPARTILHAR
             Button {
-                sharedItem = gratidao
+                sharedItem = gratitude
             } label: {
                 Image(systemName: "square.and.arrow.up")
             }
@@ -58,13 +58,13 @@ struct ListItem: View {
             // FAVORITAR
             Button {
                 HapticHandler.instance.impact(feedbackStyle: .light)
-                GratitudeController().toggleFavorited(gratitude: gratidao, context: moc)
+                GratitudeController().toggleFavorited(gratitude: gratitude, context: moc)
                 
             } label: {
                 
                 Image(systemName: "heart")
                 
-            }.tint(gratidao.favoritado ?  Color.gray : Color(.brightBlue))
+            }.tint(gratitude.favoritado ?  Color.gray : Color(.brightBlue))
         }
         .sheet(item: $sharedItem) { item in
             if let titulo = item.titulo, let descricao = item.descricao, let data = item.data {
@@ -77,7 +77,7 @@ struct ListItem: View {
     
     // MARK: UI COMPONENTS
     var title : some View {
-        if let title = gratidao.titulo {
+        if let title = gratitude.titulo {
             Text(title)
                 .font(.headline)
         } else {
@@ -86,7 +86,7 @@ struct ListItem: View {
     }
     
     var date : some View {
-        if let gratitudeDate = gratidao.data {
+        if let gratitudeDate = gratitude.data {
             Text(gratitudeDate.formatted(date: .numeric, time: .omitted))
                 .fontWeight(.light)
                 .font(.caption2)
@@ -98,5 +98,5 @@ struct ListItem: View {
 }
 
 #Preview {
-    ListItem(gratidao: Gratidao(), sharedItem: .constant(Gratidao()))
+    ListItem(gratitude: Gratidao(), sharedItem: .constant(Gratidao()))
 }

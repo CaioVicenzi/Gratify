@@ -1,18 +1,8 @@
-//
-//  InformacaoGratidao.swift
-//  Gratify
-//
-//  Created by Caio Marques on 25/10/23.
-//
-
 import SwiftUI
 import WebKit
 
-struct InformacaoGratidao: View {
-    @State var apresentarFonte1 = false
-    @State var apresentarFonte2 = false
-    @State var apresentarFonte3 = false
-
+struct GratitudeInfo: View {
+    @State var showFonts = [false, false, false]
     @State var showLinks = false
     
     var body: some View {
@@ -63,17 +53,14 @@ struct InformacaoGratidao: View {
                     
                     if showLinks {
                         VStack (alignment: .leading){
-                            LinkFonte(apresentarFonte: $apresentarFonte1, link: "https://omnihypnosis.com.br/blog-como-praticar-a-gratidao/")
-                            LinkFonte(apresentarFonte: $apresentarFonte2, link: "https://www.ibccoaching.com.br/portal/a-importancia-da-gratidao/")
-                            LinkFonte(apresentarFonte: $apresentarFonte3, link: "https://www.metropoles.com/colunas/claudia-meireles/gratidao-provada-por-estudos-de-harvard-que-faz-bem-para-o-cerebro")
+                            FontLink(showFont: $showFonts[0], link: "https://omnihypnosis.com.br/blog-como-praticar-a-gratidao/")
+                            FontLink(showFont: $showFonts[1], link: "https://www.ibccoaching.com.br/portal/a-importancia-da-gratidao/")
+                            FontLink(showFont: $showFonts[2], link: "https://www.metropoles.com/colunas/claudia-meireles/gratidao-provada-por-estudos-de-harvard-que-faz-bem-para-o-cerebro")
                             
                         }
                         .multilineTextAlignment(.leading)
                         .accentColor(.secondary)
                     }
-                    
-
-                    
                 }.padding()
             }
         }
@@ -81,13 +68,13 @@ struct InformacaoGratidao: View {
     }
 }
 
-struct LinkFonte : View {
-    @Binding var apresentarFonte : Bool
+struct FontLink : View {
+    @Binding var showFont : Bool
     let link : String
     
     var body: some View {
         Button{
-            apresentarFonte = true
+            showFont = true
         } label: {
             HStack {
                 Image(systemName: "circle.fill")
@@ -98,7 +85,7 @@ struct LinkFonte : View {
                     .multilineTextAlignment(.leading)
             }
             
-        }.sheet(isPresented: $apresentarFonte, onDismiss: nil) {
+        }.sheet(isPresented: $showFont, onDismiss: nil) {
             if let url = URL(string: link) {
                 WebView(url: url)
             }
@@ -120,6 +107,8 @@ struct WebView : UIViewRepresentable{
     
 }
 
-#Preview {
-    InformacaoGratidao()
-}
+/*
+ #Preview {
+ InformacaoGratidao()
+ }
+ */

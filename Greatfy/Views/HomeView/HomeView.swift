@@ -33,7 +33,7 @@ struct HomeView: View {
                             if let title = gratidao.titulo {
                                 if (title.lowercased().contains(vm.searchText.lowercased()) || vm.searchText == "") {
                                     NavigationLink{
-                                        DetalhamentoView(gratidao: gratidao)
+                                        DetailView(gratitude: gratidao)
                                     } label: {
                                         ListItem(gratidao: gratidao, sharedItem: $vm.sharedItem)
                                     }
@@ -63,8 +63,10 @@ struct HomeView: View {
     }
 }
 
+/*
 #Preview {
     NavigationStack {
         HomeView()
     }
 }
+*/

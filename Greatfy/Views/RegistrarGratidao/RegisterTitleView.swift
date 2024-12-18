@@ -1,14 +1,14 @@
 import SwiftUI
 
-struct RegistrarTituloView: View {
+struct RegisterTitleView: View {
     @StateObject var vm : RegisterViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
             
-            if vm.mostrarPopup {
-                PopupErro(showPopup: $vm.mostrarPopup)
+            if vm.showLongTitleError {
+                PopupErro(showPopup: $vm.showLongTitleError)
             }
             Text("Dê um título curto para sua gratidão")
                 .font(.headline)

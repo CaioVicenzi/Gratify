@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */; };
 		FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */; };
 		FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10641E2C149CA700DF1B98 /* CameraView.swift */; };
 		FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1064202C149CC100DF1B98 /* ImagePicker.swift */; };
-		FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */; };
-		FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */; };
+		FD495D072C13A5CE006EFA7D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D062C13A5CE006EFA7D /* DetailViewModel.swift */; };
+		FD495D092C148717006EFA7D /* DetailViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D082C148717006EFA7D /* DetailViewComponents.swift */; };
 		FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */; };
 		FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
 		FD4F40412A29217E008F68E8 /* GratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratitudeController.swift */; };
 		FD56BCC12C1F7BAD00C0AA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */; };
 		FD6F832F2D0DF9F200BB3387 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */; };
 		FD6F83342D0E798600BB3387 /* ConfigureNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F83332D0E798600BB3387 /* ConfigureNotificationViewModel.swift */; };
-		FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */; };
+		FD73D6712A0FED4C005E5E49 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73D6702A0FED4C005E5E49 /* DetailView.swift */; };
 		FD76C5272C18B703008CF8C7 /* StreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD76C5262C18B703008CF8C7 /* StreakCalculator.swift */; };
 		FD8576E42C15601000EDFB28 /* GratidaoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4F403D2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld */; };
 		FD8576E52C15601300EDFB28 /* GratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F40402A29217E008F68E8 /* GratitudeController.swift */; };
 		FD8576E72C15603200EDFB28 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8576E62C15603200EDFB28 /* DataService.swift */; };
 		FDAE47AA2A02864C0095FB09 /* GratifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47A92A02864C0095FB09 /* GratifyApp.swift */; };
 		FDAE47B12A02864D0095FB09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */; };
-		FDAE47B82A0286E80095FB09 /* RegistrarGratidaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */; };
+		FDAE47B82A0286E80095FB09 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE47B72A0286E80095FB09 /* RegisterView.swift */; };
+		FDB317E62D110CEC00189011 /* GrowStreakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB317E52D110CEC00189011 /* GrowStreakViewModel.swift */; };
 		FDC3F08B2C1A1A3D00FF519F /* InformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0892C1A1A2400FF519F /* InformationPage.swift */; };
 		FDC3F08E2C1A1BC700FF519F /* InformationShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F08C2C1A1ADA00FF519F /* InformationShortcutsView.swift */; };
-		FDC3F0932C1F5CE400FF519F /* RegistrarDescricaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0922C1F5CE400FF519F /* RegistrarDescricaoView.swift */; };
-		FDC3F0952C1F5CEE00FF519F /* RegistrarDetalhesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0942C1F5CEE00FF519F /* RegistrarDetalhesView.swift */; };
-		FDC3F0972C1F5CF900FF519F /* RegistrarTituloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0962C1F5CF900FF519F /* RegistrarTituloView.swift */; };
+		FDC3F0932C1F5CE400FF519F /* RegisterDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0922C1F5CE400FF519F /* RegisterDescriptionView.swift */; };
+		FDC3F0952C1F5CEE00FF519F /* RegisterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0942C1F5CEE00FF519F /* RegisterDetailsView.swift */; };
+		FDC3F0972C1F5CF900FF519F /* RegisterTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0962C1F5CF900FF519F /* RegisterTitleView.swift */; };
 		FDC3F0992C1F758200FF519F /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3F0982C1F758200FF519F /* Notebook.swift */; };
 		FDC9DF7F2C19CA92001C7BB6 /* SaveGratitudeAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DF7E2C19CA92001C7BB6 /* SaveGratitudeAppIntent.swift */; };
 		FDC9DF812C19CD01001C7BB6 /* ShortcutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9DF802C19CD01001C7BB6 /* ShortcutProvider.swift */; };
 		FDDDCA582B82F5290045B60D /* PopupErro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDCA572B82F5290045B60D /* PopupErro.swift */; };
-		FDE5FE1C2B7DD0C700097000 /* StreakAumentandoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */; };
+		FDE5FE1C2B7DD0C700097000 /* GrowStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE1B2B7DD0C700097000 /* GrowStreakView.swift */; };
 		FDE5FE1E2B7E59FE00097000 /* HapticHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE1D2B7E59FE00097000 /* HapticHandler.swift */; };
 		FDE5FE262B7EF0F600097000 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5FE252B7EF0F600097000 /* WidgetKit.framework */; };
 		FDE5FE282B7EF0F600097000 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5FE272B7EF0F600097000 /* SwiftUI.framework */; };
@@ -45,7 +45,7 @@
 		FDE5FE2F2B7EF0F800097000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE5FE2E2B7EF0F800097000 /* Assets.xcassets */; };
 		FDE5FE332B7EF0F800097000 /* StreakWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FDE5FE232B7EF0F600097000 /* StreakWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FDE5FE3A2B7EF3BF00097000 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5FE382B7EF2DF00097000 /* Color.swift */; };
-		FDE8BE912AE9ACB00041F688 /* InformacaoGratidao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE902AE9ACB00041F688 /* InformacaoGratidao.swift */; };
+		FDE8BE912AE9ACB00041F688 /* GratitudeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE902AE9ACB00041F688 /* GratitudeInfo.swift */; };
 		FDE8BE942AE9B8010041F688 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE932AE9B8010041F688 /* NotificationHandler.swift */; };
 		FDE8BE962AEA111E0041F688 /* ConfigureNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8BE952AEA111E0041F688 /* ConfigureNotificationView.swift */; };
 		FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6E05C2C133ADB0017385D /* HomeView.swift */; };
@@ -79,35 +79,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarraDePesquisaFiltro.swift; sourceTree = "<group>"; };
 		FD10641C2C149C6D00DF1B98 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		FD10641E2C149CA700DF1B98 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FD1064202C149CC100DF1B98 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewModel.swift; sourceTree = "<group>"; };
-		FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoViewComponents.swift; sourceTree = "<group>"; };
+		FD495D062C13A5CE006EFA7D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		FD495D082C148717006EFA7D /* DetailViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewComponents.swift; sourceTree = "<group>"; };
 		FD495D0A2C149007006EFA7D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FD4F403E2A2920A8008F68E8 /* GratidaoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GratidaoModel.xcdatamodel; sourceTree = "<group>"; };
 		FD4F40402A29217E008F68E8 /* GratitudeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeController.swift; sourceTree = "<group>"; };
 		FD56BCC02C1F7BAC00C0AA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD6F832E2D0DF9F200BB3387 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FD6F83332D0E798600BB3387 /* ConfigureNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNotificationViewModel.swift; sourceTree = "<group>"; };
-		FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhamentoView.swift; sourceTree = "<group>"; };
+		FD73D6702A0FED4C005E5E49 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FD76C5262C18B703008CF8C7 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
 		FD8576E62C15603200EDFB28 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FDAE47A62A02864C0095FB09 /* Gratify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAE47A92A02864C0095FB09 /* GratifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratifyApp.swift; sourceTree = "<group>"; };
 		FDAE47B02A02864D0095FB09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarGratidaoView.swift; sourceTree = "<group>"; };
+		FDAE47B72A0286E80095FB09 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FDB317E52D110CEC00189011 /* GrowStreakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowStreakViewModel.swift; sourceTree = "<group>"; };
 		FDC3F0892C1A1A2400FF519F /* InformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPage.swift; sourceTree = "<group>"; };
 		FDC3F08C2C1A1ADA00FF519F /* InformationShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationShortcutsView.swift; sourceTree = "<group>"; };
-		FDC3F0922C1F5CE400FF519F /* RegistrarDescricaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarDescricaoView.swift; sourceTree = "<group>"; };
-		FDC3F0942C1F5CEE00FF519F /* RegistrarDetalhesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarDetalhesView.swift; sourceTree = "<group>"; };
-		FDC3F0962C1F5CF900FF519F /* RegistrarTituloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarTituloView.swift; sourceTree = "<group>"; };
+		FDC3F0922C1F5CE400FF519F /* RegisterDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDescriptionView.swift; sourceTree = "<group>"; };
+		FDC3F0942C1F5CEE00FF519F /* RegisterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDetailsView.swift; sourceTree = "<group>"; };
+		FDC3F0962C1F5CF900FF519F /* RegisterTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleView.swift; sourceTree = "<group>"; };
 		FDC3F0982C1F758200FF519F /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Notebook.swift; path = ../../Notebook.swift; sourceTree = "<group>"; };
 		FDC9DF7E2C19CA92001C7BB6 /* SaveGratitudeAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGratitudeAppIntent.swift; sourceTree = "<group>"; };
 		FDC9DF802C19CD01001C7BB6 /* ShortcutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutProvider.swift; sourceTree = "<group>"; };
 		FDDDCA572B82F5290045B60D /* PopupErro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupErro.swift; sourceTree = "<group>"; };
-		FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakAumentandoView.swift; sourceTree = "<group>"; };
+		FDE5FE1B2B7DD0C700097000 /* GrowStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowStreakView.swift; sourceTree = "<group>"; };
 		FDE5FE1D2B7E59FE00097000 /* HapticHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHandler.swift; sourceTree = "<group>"; };
 		FDE5FE232B7EF0F600097000 /* StreakWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreakWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE5FE252B7EF0F600097000 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -119,7 +119,7 @@
 		FDE5FE382B7EF2DF00097000 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FDE5FE3B2B7EF74300097000 /* Gratify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gratify.entitlements; sourceTree = "<group>"; };
 		FDE5FE3C2B7EF85400097000 /* StreakWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreakWidgetExtension.entitlements; sourceTree = "<group>"; };
-		FDE8BE902AE9ACB00041F688 /* InformacaoGratidao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacaoGratidao.swift; sourceTree = "<group>"; };
+		FDE8BE902AE9ACB00041F688 /* GratitudeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeInfo.swift; sourceTree = "<group>"; };
 		FDE8BE932AE9B8010041F688 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		FDE8BE952AEA111E0041F688 /* ConfigureNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNotificationView.swift; sourceTree = "<group>"; };
 		FDF6E05C2C133ADB0017385D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -154,9 +154,9 @@
 				FD6F83322D0E006600BB3387 /* OnboardingView */,
 				FD8576E32C154F1100EDFB28 /* ConfigureNotifications */,
 				FDDDCA562B82F5170045B60D /* Components */,
-				FDE5FE1A2B7DD0B400097000 /* StreakAumentando */,
-				FDE8BE8F2AE9AC990041F688 /* InformacaoGratidao */,
-				FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */,
+				FDE5FE1A2B7DD0B400097000 /* GrowStreak */,
+				FDE8BE8F2AE9AC990041F688 /* GratitudeInfo */,
+				FD4F404A2A2A6C36008F68E8 /* Detail */,
 				FD4F40492A2A6BAF008F68E8 /* RegistrarGratidao */,
 				FD4F40442A2A5E0E008F68E8 /* HomeView */,
 			);
@@ -175,8 +175,8 @@
 		FD4F40442A2A5E0E008F68E8 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				FDB317E82D12F8C700189011 /* ViewModel */,
 				FDF6E0582C133A8A0017385D /* Components */,
-				FDF6E0602C133C000017385D /* HomeViewModel.swift */,
 				FDF6E05C2C133ADB0017385D /* HomeView.swift */,
 				FDF6E0642C1373250017385D /* HomeViewUIComponents.swift */,
 			);
@@ -187,22 +187,22 @@
 			isa = PBXGroup;
 			children = (
 				FD6F83312D0E005500BB3387 /* ViewModel */,
-				FDAE47B72A0286E80095FB09 /* RegistrarGratidaoView.swift */,
-				FDC3F0922C1F5CE400FF519F /* RegistrarDescricaoView.swift */,
-				FDC3F0942C1F5CEE00FF519F /* RegistrarDetalhesView.swift */,
-				FDC3F0962C1F5CF900FF519F /* RegistrarTituloView.swift */,
+				FDAE47B72A0286E80095FB09 /* RegisterView.swift */,
+				FDC3F0922C1F5CE400FF519F /* RegisterDescriptionView.swift */,
+				FDC3F0942C1F5CEE00FF519F /* RegisterDetailsView.swift */,
+				FDC3F0962C1F5CF900FF519F /* RegisterTitleView.swift */,
 			);
 			path = RegistrarGratidao;
 			sourceTree = "<group>";
 		};
-		FD4F404A2A2A6C36008F68E8 /* DetalhamentoGratidao */ = {
+		FD4F404A2A2A6C36008F68E8 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				FD73D6702A0FED4C005E5E49 /* DetalhamentoView.swift */,
-				FD495D062C13A5CE006EFA7D /* DetalhamentoViewModel.swift */,
-				FD495D082C148717006EFA7D /* DetalhamentoViewComponents.swift */,
+				FDB317E72D12F8B300189011 /* ViewModel */,
+				FD73D6702A0FED4C005E5E49 /* DetailView.swift */,
+				FD495D082C148717006EFA7D /* DetailViewComponents.swift */,
 			);
-			path = DetalhamentoGratidao;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		FD6F83312D0E005500BB3387 /* ViewModel */ = {
@@ -224,8 +224,8 @@
 		FD8576E32C154F1100EDFB28 /* ConfigureNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				FDB317E32D110CC600189011 /* ViewModel */,
 				FDE8BE952AEA111E0041F688 /* ConfigureNotificationView.swift */,
-				FD6F83332D0E798600BB3387 /* ConfigureNotificationViewModel.swift */,
 			);
 			path = ConfigureNotifications;
 			sourceTree = "<group>";
@@ -272,6 +272,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FDB317E32D110CC600189011 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F83332D0E798600BB3387 /* ConfigureNotificationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDB317E42D110CDD00189011 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDB317E52D110CEC00189011 /* GrowStreakViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDB317E72D12F8B300189011 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD495D062C13A5CE006EFA7D /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDB317E82D12F8C700189011 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDF6E0602C133C000017385D /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FDDDCA562B82F5170045B60D /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,12 +316,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		FDE5FE1A2B7DD0B400097000 /* StreakAumentando */ = {
+		FDE5FE1A2B7DD0B400097000 /* GrowStreak */ = {
 			isa = PBXGroup;
 			children = (
-				FDE5FE1B2B7DD0C700097000 /* StreakAumentandoView.swift */,
+				FDB317E42D110CDD00189011 /* ViewModel */,
+				FDE5FE1B2B7DD0C700097000 /* GrowStreakView.swift */,
 			);
-			path = StreakAumentando;
+			path = GrowStreak;
 			sourceTree = "<group>";
 		};
 		FDE5FE242B7EF0F600097000 /* Frameworks */ = {
@@ -316,14 +349,14 @@
 			path = StreakWidget;
 			sourceTree = "<group>";
 		};
-		FDE8BE8F2AE9AC990041F688 /* InformacaoGratidao */ = {
+		FDE8BE8F2AE9AC990041F688 /* GratitudeInfo */ = {
 			isa = PBXGroup;
 			children = (
-				FDE8BE902AE9ACB00041F688 /* InformacaoGratidao.swift */,
+				FDE8BE902AE9ACB00041F688 /* GratitudeInfo.swift */,
 				FDC3F0892C1A1A2400FF519F /* InformationPage.swift */,
 				FDC3F08C2C1A1ADA00FF519F /* InformationShortcutsView.swift */,
 			);
-			path = InformacaoGratidao;
+			path = GratitudeInfo;
 			sourceTree = "<group>";
 		};
 		FDE8BE922AE9B7F30041F688 /* Handler */ = {
@@ -340,7 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				FDF6E0622C1347FA0017385D /* ListItem.swift */,
-				FD08C4A82A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -446,22 +478,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC3F0972C1F5CF900FF519F /* RegistrarTituloView.swift in Sources */,
-				FD495D092C148717006EFA7D /* DetalhamentoViewComponents.swift in Sources */,
+				FDC3F0972C1F5CF900FF519F /* RegisterTitleView.swift in Sources */,
+				FD495D092C148717006EFA7D /* DetailViewComponents.swift in Sources */,
 				FD1064212C149CC100DF1B98 /* ImagePicker.swift in Sources */,
 				FDE8BE962AEA111E0041F688 /* ConfigureNotificationView.swift in Sources */,
 				FDF6E0652C1373250017385D /* HomeViewUIComponents.swift in Sources */,
-				FDE5FE1C2B7DD0C700097000 /* StreakAumentandoView.swift in Sources */,
+				FDE5FE1C2B7DD0C700097000 /* GrowStreakView.swift in Sources */,
 				FDF6E0632C1347FA0017385D /* ListItem.swift in Sources */,
 				FDE8BE942AE9B8010041F688 /* NotificationHandler.swift in Sources */,
 				FD4F403F2A2920A8008F68E8 /* GratidaoModel.xcdatamodeld in Sources */,
+				FDB317E62D110CEC00189011 /* GrowStreakViewModel.swift in Sources */,
 				FDC3F08E2C1A1BC700FF519F /* InformationShortcutsView.swift in Sources */,
-				FDAE47B82A0286E80095FB09 /* RegistrarGratidaoView.swift in Sources */,
-				FD73D6712A0FED4C005E5E49 /* DetalhamentoView.swift in Sources */,
+				FDAE47B82A0286E80095FB09 /* RegisterView.swift in Sources */,
+				FD73D6712A0FED4C005E5E49 /* DetailView.swift in Sources */,
 				FDC3F08B2C1A1A3D00FF519F /* InformationPage.swift in Sources */,
-				FD08C4A92A1AC1F200B158C6 /* BarraDePesquisaFiltro.swift in Sources */,
-				FD495D072C13A5CE006EFA7D /* DetalhamentoViewModel.swift in Sources */,
-				FDE8BE912AE9ACB00041F688 /* InformacaoGratidao.swift in Sources */,
+				FD495D072C13A5CE006EFA7D /* DetailViewModel.swift in Sources */,
+				FDE8BE912AE9ACB00041F688 /* GratitudeInfo.swift in Sources */,
 				FDAE47AA2A02864C0095FB09 /* GratifyApp.swift in Sources */,
 				FD10641F2C149CA700DF1B98 /* CameraView.swift in Sources */,
 				FDF6E05D2C133ADB0017385D /* HomeView.swift in Sources */,
@@ -470,10 +502,10 @@
 				FDC3F0992C1F758200FF519F /* Notebook.swift in Sources */,
 				FDF6E0612C133C000017385D /* HomeViewModel.swift in Sources */,
 				FD76C5272C18B703008CF8C7 /* StreakCalculator.swift in Sources */,
-				FDC3F0952C1F5CEE00FF519F /* RegistrarDetalhesView.swift in Sources */,
+				FDC3F0952C1F5CEE00FF519F /* RegisterDetailsView.swift in Sources */,
 				FDDDCA582B82F5290045B60D /* PopupErro.swift in Sources */,
 				FD4F40412A29217E008F68E8 /* GratitudeController.swift in Sources */,
-				FDC3F0932C1F5CE400FF519F /* RegistrarDescricaoView.swift in Sources */,
+				FDC3F0932C1F5CE400FF519F /* RegisterDescriptionView.swift in Sources */,
 				FD10641D2C149C6D00DF1B98 /* ShareSheet.swift in Sources */,
 				FD6F83342D0E798600BB3387 /* ConfigureNotificationViewModel.swift in Sources */,
 				FD495D0B2C149007006EFA7D /* RegisterViewModel.swift in Sources */,

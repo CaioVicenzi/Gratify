@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RegistrarDescricaoView: View {
+struct RegisterDescriptionView: View {
     @StateObject var vm : RegisterViewModel
     
     var body: some View {

@@ -1,10 +1,3 @@
-//
-//  InformationShortcutsView.swift
-//  StreakWidgetExtension
-//
-//  Created by Caio Marques on 12/06/24.
-//
-
 import SwiftUI
 
 struct InformationShortcutsView: View {
@@ -19,7 +12,7 @@ struct InformationShortcutsView: View {
                 
                 HStack {
                     VStack (alignment: .leading){
-                        tituloSecao("Widget")
+                        sectionTitle("Widget")
                         
                         Text("O widget do Gratify de permite acompanhar a sua streak e se lembrar de ser grato no dia.")
                     }
@@ -30,7 +23,7 @@ struct InformationShortcutsView: View {
                 }
                 
                 
-                tituloSecao("Siri")
+                sectionTitle("Siri")
                 
                 Text("Através da Siri é possível adicionar uma gratidão pelos seguintes comandos de vez")
                 listItem("Salve uma gratidão no Gratify")
@@ -39,7 +32,7 @@ struct InformationShortcutsView: View {
                 listItem("Escreva uma gratidão para mim no Gratify")
                 listItem("Nova gratidão no Gratify")
                 
-                tituloSecao("Atalho")
+                sectionTitle("Atalho")
                 
                 Text("O atalho também te permite registrar uma gratidão nova no Gratify com um título e uma descrição")
             }
@@ -48,7 +41,7 @@ struct InformationShortcutsView: View {
     }
     
     @ViewBuilder
-    func tituloSecao (_ texto : String) -> some View {
+    func sectionTitle (_ texto : String) -> some View {
         Text(texto)
             .font(.title2)
             .fontWeight(.bold)

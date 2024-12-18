@@ -51,7 +51,7 @@ extension HomeView {
             Image(systemName: "square.and.pencil")
         }
         .navigationDestination(isPresented: $vm.showRegisterGratitude) {
-            RegistrarGratidaoView()
+            RegisterView()
         }
     }
         
@@ -67,7 +67,7 @@ extension HomeView {
             Text("Adicione uma gratidão para a gente sortear!")
         }
         .navigationDestination(item: $vm.randomGratitude) { gratitude in
-            DetalhamentoView(gratidao: gratitude)
+            DetailView(gratitude: gratitude)
         }
     }
     
@@ -107,16 +107,6 @@ extension HomeView {
         }
     }
     
-    var backgroundList : some View {
-        VStack {
-            HStack {
-                Image("nuvemRosa")
-                Spacer()
-            }
-            .padding(.horizontal)
-        }
-    }
-    
     var backgroundDismissKeyboard : some View {
         Rectangle()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -124,72 +114,4 @@ extension HomeView {
                 vm.dismissKeyboard()
             }
     }
-    
-    /*
-    var backgroundPinkClouds : some View {
-        
-        VStack {
-            
-            HStack {
-                Spacer()
-            }
-            .offset(x: -30)
-            
-            Spacer()
-            
-            HStack {
-                Spacer()
-                Image("nuvemrosa")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 150)
-                    .offset(y: -30)
-                    .opacity(0.2)
-            }
-            .padding(.horizontal)
-            
-            Spacer()
-            
-            HStack {
-                Image("nuvemrosa")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 150)
-                    .opacity(0.3)
-                Spacer()
-            }
-            .padding(.horizontal)
-            Spacer()
-            
-            Spacer()
-            
-            HStack {
-                Spacer()
-                Image("nuvemrosa")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 100)
-                    .opacity(0.3)
-            }
-            .padding(.horizontal)
-            
-            Spacer()
-            
-            HStack {
-                Image("nuvemrosa")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 100)
-                    .opacity(0.4)
-                Spacer()
-            }
-            Spacer()
-
-            
-        }
-        
-    }
-     */
-    
-    
 }

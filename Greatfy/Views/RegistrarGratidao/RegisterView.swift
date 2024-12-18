@@ -1,13 +1,11 @@
 import SwiftUI
 import WidgetKit
 
-struct RegistrarGratidaoView : View {
+struct RegisterView : View {
     @StateObject var vm : RegisterViewModel = RegisterViewModel()
-
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Gratidao.data, ascending: false)]) var gratidoes:FetchedResults<Gratidao>
     
     var body: some View {
         VStack {
@@ -34,7 +32,7 @@ struct RegistrarGratidaoView : View {
                     .background(Color(.brightBlue))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
-                .alert(Text("Preencha o campo corretamente..."), isPresented: $vm.vazio) {
+                .alert(Text("Preencha o campo corretamente..."), isPresented: $vm.showEmptyFieldError) {
                     Button ("OK") {}
                 }
             }
@@ -51,17 +49,19 @@ struct RegistrarGratidaoView : View {
                 .opacity(0.4)
         )
         .onAppear(perform: {
-            vm.configVM(moc: moc, dismiss: dismiss, fetchedResults: gratidoes)
+            vm.configVM(moc: moc, dismiss: dismiss)
         })
-        .navigationDestination(isPresented: $vm.mostrarStreakAumentando) {
-            StreakAumentandoView()
+        .navigationDestination(isPresented: $vm.goGrowStreak) {
+            GrowStreakView()
                 .navigationBarBackButtonHidden()
         }
     }
 }
 
+/*
 #Preview {
     NavigationStack {
         RegistrarGratidaoView()
     }
 }
+*/
