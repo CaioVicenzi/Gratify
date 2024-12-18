@@ -35,7 +35,7 @@ struct HomeView: View {
                                     NavigationLink{
                                         DetailView(gratitude: gratidao)
                                     } label: {
-                                        ListItem(gratidao: gratidao, sharedItem: $vm.sharedItem)
+                                        ListItem(gratitude: gratidao, sharedItem: $vm.sharedItem)
                                     }
                                 }
                             }
